@@ -64,6 +64,8 @@ const CenterContent = () => {
 };
 
   return (
+    <div className="flex flex-col items-center ">
+
     <div className="text-6xl flex items-center justify-center pt-16">
       <div>
   <h1  className="typewrite text-color-600" data-period="2000" data-type='[ "Create", "Post", "Comment", "Socialize" ]'>
@@ -71,6 +73,11 @@ const CenterContent = () => {
   </h1>
 </div>
 <h1 className="text-6xl">To Earn</h1>
+    </div>
+
+   <div className="pt-4 ">
+     <h1 className="text-2xl"> Join Communities, share your Creativity and get appreciated for your stuff!</h1>
+     </div> 
     </div>
   )
 }
