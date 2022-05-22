@@ -18,7 +18,9 @@ export default function Home() {
     <div className="">
       <NavBar />
       <CenterContent />
+      <div className='absolute bottom-[15px] left-0 w-screen flex justify-center items-center'>
       <PrimaryBtn text="Let the Journy begin" onClick={open} />
+      </div>
       <PopUpModal isOpen={isOpen} onClose={close} >
         <SignUpContent closePopUp={close}/>
       </PopUpModal>

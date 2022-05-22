@@ -6,12 +6,22 @@ const base = new Airtable({apiKey: "keyX217mb8lxAgZS6"}).base("appH3euv1Dzz8CQx1
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const SignUpContent = () => {
+const SignUpContent = ({closePopUp}) => {
     const emailInputRef = useRef();
     const [signingUp, setSigningUp] = useState(false);
-    const notifySuccess = () => toast.success('LFG! 🚀', {
+    const notifySuccess = (text) => toast.success(text, {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
+
+    const notifyError = (text) => toast.error(text, {
+        position: "top-right",
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -22,40 +32,36 @@ const SignUpContent = () => {
         setSigningUp(true);
         try{
         const email = emailInputRef.current.value;
-        console.log("email : ",email);
         base('join').create([
             {
             "fields":{'emails':email},
             }],function (err, records){
             if(err){
-                console.error(err);
                 setSigningUp(false)
+                notifyError("Something went wrong. Please try again later.");
                 return;
             }
             if(records.length > 0){
-                notifySuccess();
-                console.log("Successfully");
+                notifySuccess("LFG! 🚀");
                 setSigningUp(false)
             }
-            console.log('records',records);
             });
         }catch(error){
             setSigningUp(false);
-        console.error(error);
+            notifyError("Something went wrong. Please try again later.");
+
         }
     }
   return (
-    <div className="w-[450px] flex flex-col items-center justify-center">
+    <div className="max-w-[450px] flex flex-col items-center justify-center">
         <ToastContainer
             position="top-right"
-            autoClose={5000}
+            autoClose={3000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
             rtl={false}
             pauseOnFocusLoss
-            draggable
-            pauseOnHover
             />
             {/* Same as */}
             <ToastContainer />
