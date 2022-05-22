@@ -7,8 +7,7 @@ import SignUpContent from '../components/SignUpContent'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState
-  (false);
+  const [isOpen, setIsOpen] = useState(false);
   const close = () => {
     setIsOpen(false);
   }
