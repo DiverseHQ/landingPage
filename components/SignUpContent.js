@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const SignUpContent = () => {
     const emailInputRef = useRef();
     const [signingUp, setSigningUp] = useState(false);
-    const notifySuccess = () => toast.success('🦄 Wow so easy!', {
+    const notifySuccess = () => toast.success('LFG! 🚀', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
