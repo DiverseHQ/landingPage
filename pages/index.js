@@ -15,7 +15,7 @@ export default function Home() {
     setIsOpen(true);
   }
   return (
-    <div className="">
+    <div >
       <NavBar />
       <CenterContent />
       <div className='absolute bottom-[15px] left-0 w-screen flex justify-center items-center'>

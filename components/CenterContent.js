@@ -1,84 +1,28 @@
-import React from 'react';
-
+import React from 'react'
+import styles from "../styles/CenterContent.module.css"
+import Typewriter from 'typewriter-effect';
 
 const CenterContent = () => {
-  if(typeof window === 'object'){
-    var TxtType = function(el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.tick();
-      this.isDeleting = false;
-  };
-  
-  TxtType.prototype.tick = function() {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
-  
-      if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-  
-      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-  
-      var that = this;
-      var delta = 200 - Math.random() * 100;
-  
-      if (this.isDeleting) { delta /= 2; }
-  
-      if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-      }
-  
-      setTimeout(function() {
-      that.tick();
-      }, delta);
-  };
-  
-  window.onload = function() {
-      var elements = document.getElementsByClassName('typewrite');
-      for (var i=0; i<elements.length; i++) {
-          var toRotate = elements[i].getAttribute('data-type');
-          var period = elements[i].getAttribute('data-period');
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-          }
-      }
-      // INJECT CSS
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-      document.body.appendChild(css);
-  }
-
- 
-};
-
   return (
     <div className="flex flex-col items-center min-h-[70vh] justify-center mb-[90px] relative">
-        <img src="/vector-bg.png" className="max-h-[80vh] object-contain" />
-        <div className='absolute'>
-    <div className="text-6xl flex items-center justify-center pt-16">
+      <img src="/vector-bg.png" className="max-h-[80vh] object-contain" />
+      <div className="absolute">
+      <div className="text-5xl md:text-6xl flex items-center justify-center pt-16">
       <div>
-  <h1  className="typewrite text-color-600" data-period="2000" data-type='[ "Create", "Post", "Comment", "Socialize" ]'>
-    <span className="wrap"></span>
-  </h1>
+      <Typewriter
+  options={{
+    strings: ['Create', 'Comment', 'Socialize'],
+    autoStart: true,
+    loop: true,
+    wrapperClassName: 'text-purple-600',
+  }}
+/>
 </div>
-<h1 className="text-6xl pl-3"> To Earn</h1>
+<h1 className="text-5xl md:text-6xl">To Earn</h1>
     </div>
-
-   <div className="pt-4 ">
+   <div className="pt-4">
      <h1 className="text-2xl max-w-2xl text-center leading-10 p-1"> Join Communities, share your Creativity and get appreciated for your stuff!</h1>
-     </div> 
+     </div>   
     </div>
     </div>
   )

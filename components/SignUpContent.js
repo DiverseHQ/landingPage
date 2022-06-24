@@ -72,8 +72,8 @@ const SignUpContent = ({closePopUp}) => {
             />
             {/* Same as */}
             <ToastContainer />
-          <div className="text-5xl text-center font-bold">Will tell you when we are ready </div>
-          <input placeholder='email...' className="w-full h-10 p-2 mt-10 rounded-lg border border-gray-400" ref={emailInputRef}/>
+          <div className="text-4xl text-center font-bold">Will tell you <br></br> when we are ready </div>
+          <input placeholder='email...' type="email" className="w-full h-10 p-2 mt-10 rounded-lg border border-gray-400" ref={emailInputRef} required/>
           <PrimaryBtn text="Sign Up" isLoading={signingUp} onClick={signUp} style={{marginTop: "20px"}}/>
         </div>
   )
