@@ -32,6 +32,13 @@ const SignUpContent = ({closePopUp}) => {
         setSigningUp(true);
         try{
         const email = emailInputRef.current.value;
+        //how to check if string ends with .com
+
+        if(!email || email === "" || !email.endsWith(".com")){
+            notifyError("Please enter a valid email");
+            setSigningUp(false);
+            return;
+        }
         base('join').create([
             {
             "fields":{'emails':email},
