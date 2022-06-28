@@ -50,7 +50,8 @@ const SignUpContent = ({closePopUp}) => {
             }
             if(records.length > 0){
                 notifySuccess("LFG! 🚀");
-                setSigningUp(false)
+                setSigningUp(false);
+                setTimeout(closePopUp, 3000);
             }
             });
         }catch(error){
