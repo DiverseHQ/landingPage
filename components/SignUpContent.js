@@ -60,6 +60,25 @@ const SignUpContent = ({closePopUp}) => {
 
         }
     }
+
+    //function to return days left for 31 july 2022
+    const getDaysLeft = () => {
+        const date = new Date();
+        const currentDate = date.getDate();
+        const currentMonth = date.getMonth();
+        const currentYear = date.getFullYear();
+        const currentHours = date.getHours();
+        const currentMinutes = date.getMinutes();
+        const currentSeconds = date.getSeconds();
+        const currentMilliseconds = date.getMilliseconds();
+        const currentTime = new Date(currentYear, currentMonth, currentDate, currentHours, currentMinutes, currentSeconds, currentMilliseconds);
+        const futureDate = new Date(2022, 6, 31, currentHours, currentMinutes, currentSeconds, currentMilliseconds);
+        const timeDiff = futureDate.getTime() - currentTime.getTime();
+        const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        return daysLeft;
+    }
+
+    const daysLeft = getDaysLeft();
   return (
     <div className="max-w-[450px] flex flex-col items-center justify-center">
         <ToastContainer
@@ -73,9 +92,10 @@ const SignUpContent = ({closePopUp}) => {
             />
             {/* Same as */}
             <ToastContainer />
-          <div className="text-4xl text-center font-bold">Will tell you <br></br> when we are ready </div>
-          <input placeholder='email...' type="email" className="w-full h-10 p-2 mt-10 rounded-lg border border-gray-400" ref={emailInputRef} required/>
-          <PrimaryBtn text="Sign Up" isLoading={signingUp} onClick={signUp} style={{marginTop: "20px"}}/>
+          <div className="text-4xl text-center font-bold">Beta Testing Live in<br></br>
+          <span className="text-purple-300"> {daysLeft}  Days </span></div>
+          <input placeholder='email...' type="email" className="w-full h-10 p-2 mt-6 rounded-lg border border-gray-400" ref={emailInputRef} required/>
+          <PrimaryBtn text="Get Notified 🔔" isLoading={signingUp} onClick={signUp} style={{marginTop: "20px"}}/>
         </div>
   )
 }
