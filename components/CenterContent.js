@@ -21,7 +21,7 @@ const CenterContent = () => {
 <h1 className="text-5xl md:text-6xl">To Earn</h1>
     </div>
    <div className="pt-4">
-     <h1 className="text-2xl max-w-2xl text-center leading-10 p-1"> Join Communities, share your Creativity and get appreciated for your stuff!</h1>
+     <h1 className="text-2xl max-w-2xl text-center leading-10 p-1 text-slate-700"> Join Communities, share your Creativity and get appreciated for your stuff!</h1>
      </div>   
     </div>
     </div>

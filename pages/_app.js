@@ -2,7 +2,7 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return <>
-  <div className="text-black h-screen">
+  <div className="text-black">
   <Component {...pageProps} />
   </div>
   </> 
