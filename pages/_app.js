@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     site_name: 'DiverseHQ',
     images: [
       {
-        url: 'https://diversehq.xyz/images/vector-bg.png',
+        url: 'https://diversehq.xyz/vector-bg.png',
         width: 1200,
         height: 630,
         alt: 'DiverseHQ',
