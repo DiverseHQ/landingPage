@@ -13,7 +13,7 @@ const NavBar = () => {
       </div>
       <div className="flex">
         <img src="/discordIcon.png" onClick={() => {
-          openInNewTab("https://discord.gg/AHWXpyaKCc");
+          openInNewTab("https://discord.gg/SbtgpknY");
         }} className="mr-4 w-[45px] cursor-pointer" />
         <img src="/twitterIcon.png" className="cursor-pointer w-[45px] cursor-pointer" onClick={() => {
           openInNewTab("https://twitter.com/useDiverseHQ");
