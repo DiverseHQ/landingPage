@@ -12,7 +12,7 @@ const CardComponent = ({card}) => {
                 {card.title}
             </div>
             </div>
-            <div className='w-full pl-3 pt-5  text-2xl  text-center sm:text-left leading-8 sm:leading-10 text-slate-700  h-full'>
+            <div className='w-full pl-3 pt-6  text-2xl  text-center sm:text-left leading-7 sm:leading-10 text-slate-700  h-full'>
                 {card.description}
                 </div>
     </div>

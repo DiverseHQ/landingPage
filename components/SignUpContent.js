@@ -79,6 +79,12 @@ const SignUpContent = ({closePopUp}) => {
     }
 
     const daysLeft = getDaysLeft();
+
+    const handleEnter = (e) => {
+        if(e.key === "Enter"){
+            signUp();
+        }
+    }
   return (
     <div className="max-w-[450px] flex flex-col items-center justify-center">
         <ToastContainer
@@ -94,7 +100,7 @@ const SignUpContent = ({closePopUp}) => {
             <ToastContainer />
           <div className="text-4xl text-center font-bold">Beta Testing Live in<br></br>
           <span className="text-purple-300"> {daysLeft}  Days </span></div>
-          <input placeholder='email...' type="email" className="w-full h-10 p-2 mt-6 rounded-lg border border-gray-400" ref={emailInputRef} required/>
+          <input placeholder='email...' onKeyUp={handleEnter} type="email" className="w-full h-10 p-2 mt-6 rounded-lg border border-gray-400" ref={emailInputRef} required/>
           <PrimaryBtn text="Get Notified 🔔" isLoading={signingUp} onClick={signUp} style={{marginTop: "20px"}}/>
         </div>
   )
