@@ -26,7 +26,7 @@ const cardContents = [
 
 const ListOfCardComponents = () => {
   return (
-    <div className='flex flex-row flex-wrap w-screen items-center justify-center'>{cardContents.map((card,index) => {
+    <div className='flex flex-row flex-wrap w-full items-center justify-center'>{cardContents.map((card,index) => {
         return <CardComponent key={index} card={card} />
     })}</div>
   )

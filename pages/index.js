@@ -20,14 +20,14 @@ export default function Home() {
       <div className='h-screen'>
         <NavBar />
         <CenterContent />
-        <div className='absolute bottom-[15px] left-0 w-screen flex justify-center items-center'>
+        <div className='absolute bottom-[15px] left-0 w-full flex justify-center items-center'>
         <PrimaryBtn text="Let the Journy begin" onClick={open} />
         </div>
         <PopUpModal isOpen={isOpen} onClose={close} >
           <SignUpContent closePopUp={close}/>
         </PopUpModal>
       </div>
-      <div className='w-screen text-center mt-12'>
+      <div className='w-full text-center mt-12'>
         <div className='text-6xl font-bold'>Why DiverseHQ ?</div>
         <div className='mt-3 text-3xl p-1 mb-10 text-slate-700'>DiverseHQ is a place where you get Value out of sharing your creativity, skills, and interests.</div>
         <ListOfCardComponents />
