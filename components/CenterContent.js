@@ -14,7 +14,7 @@ const CenterContent = () => {
     strings: ['Create', 'Comment', 'Socialize'],
     autoStart: true,
     loop: true,
-    wrapperClassName: 'text-purple-600',
+    wrapperClassName: 'text-purple-600 text-4xl md:text-6xl',
   }}
 />
 </div>
