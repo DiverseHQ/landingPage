@@ -15,7 +15,7 @@ export default function Home() {
         <NavBar />
         <CenterContent />
         <div className='absolute bottom-[15px] left-0 w-full flex justify-center items-center'>
-        <PrimaryBtn text="Let the Journy begin" onClick={open} />
+        <PrimaryBtn text="Launch APP 🚀" onClick={open} />
         </div>
       </div>
       <div className='w-full text-center mt-12'>
