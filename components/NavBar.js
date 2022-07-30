@@ -8,7 +8,6 @@ const NavBar = () => {
   return (
     <div className='flex flex-row items-center p-6 pt-8 md:p-12 md:pt-12 h-6 md:h-[60px] justify-between'>
       <div className="flex flex-row align-center">
-        <h1 className="text-2xl md:text-4xl">🤿</h1>
         <h1 className="text-2xl md:text-4xl text-purple-600">DIVERSE HQ</h1>
       </div>
       <div className="flex flex-row items-center">

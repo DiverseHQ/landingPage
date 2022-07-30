@@ -17,7 +17,7 @@ const SignUpContent = ({closePopUp}) => {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+    });
 
     const notifyError = (text) => toast.error(text, {
         position: "top-right",
@@ -27,7 +27,7 @@ const SignUpContent = ({closePopUp}) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        });
+    });
     const signUp = async() => {
         setSigningUp(true);
         try{
@@ -42,19 +42,21 @@ const SignUpContent = ({closePopUp}) => {
         base('join').create([
             {
             "fields":{'emails':email},
-            }],function (err, records){
-            if(err){
-                setSigningUp(false)
-                notifyError("Something went wrong. Please try again later.");
-                return;
             }
-            if(records.length > 0){
-                notifySuccess("LFG! 🚀");
-                setSigningUp(false);
-                setTimeout(closePopUp, 3000);
-            }
+        ],function (err, records){
+                if(err){
+                    setSigningUp(false)
+                    notifyError("Something went wrong. Please try again later.");
+                    return;
+                }
+                if(records.length > 0){
+                    notifySuccess("LFG! 🚀");
+                    setSigningUp(false);
+                    setTimeout(closePopUp, 3000);
+                }
             });
         }catch(error){
+            console.log(error);
             setSigningUp(false);
             notifyError("Something went wrong. Please try again later.");
 
