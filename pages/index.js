@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
 import CenterContent from '../components/CenterContent'
 import ListOfCardComponents from '../components/ListOfCardComponents'
 import NavBar from '../components/NavBar'
 import PrimaryBtn from '../components/PrimaryBtn'
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
   const open = () => {
     window.open("https://diversehq-diversehq.vercel.app/", "_blank");
   }
