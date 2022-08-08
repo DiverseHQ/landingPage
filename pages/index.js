@@ -6,7 +6,7 @@ import PrimaryBtn from '../components/PrimaryBtn'
 
 export default function Home() {
   const open = () => {
-    window.open("https://app.diversehq.xyz/", "_blank");
+    window.open("https://app.diversehq.xyz/");
   }
   return (
     <div>
