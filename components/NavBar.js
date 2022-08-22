@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const NavBar = () => {
@@ -8,7 +9,8 @@ const NavBar = () => {
   return (
     <div className='flex flex-row items-center p-6 pt-8 md:p-12 md:pt-12 h-6 md:h-[60px] justify-between'>
       <div className="flex flex-row align-center">
-        <h1 className="text-2xl md:text-4xl text-purple-600">DIVERSE HQ</h1>
+        <Image src="/DiverseLogo.svg" alt="DiverseHQ" width={28} height={28} />
+        <h1 className="text-2xl md:text-4xl text-purple-600 ml-3">DIVERSE HQ</h1>
       </div>
       <div className="flex flex-row items-center">
         <img src="/discordIcon.png" onClick={() => {
