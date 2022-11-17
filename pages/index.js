@@ -2,6 +2,11 @@ import React from 'react'
 import CenterContent from '../components/CenterContent'
 import ListOfCardComponents from '../components/ListOfCardComponents'
 import NavBar from '../components/NavBar'
+import DiverseHQIntroPanel from '../components/new/DiverseHQIntroPanel'
+import FeaturesSection from '../components/new/FeaturesSection'
+import LandingSection from '../components/new/LandingSection'
+import SocialAndFooter from '../components/new/SocialAndFooter'
+import TeamSection from '../components/new/TeamSection'
 import PrimaryBtn from '../components/PrimaryBtn'
 
 export default function Home() {
@@ -10,7 +15,12 @@ export default function Home() {
   }
   return (
     <div>
-      <div className='h-screen'>
+      <LandingSection />
+      <DiverseHQIntroPanel />
+      <FeaturesSection />
+      <TeamSection />
+      <SocialAndFooter />
+      {/* <div className='h-screen'>
         <NavBar />
         <CenterContent />
         <div className='absolute bottom-[15px] left-0 w-full flex justify-center items-center'>
@@ -21,7 +31,7 @@ export default function Home() {
         <div className='text-6xl font-bold'>Why DiverseHQ ?</div>
         <div className='mt-3 text-3xl p-1 mb-10 text-slate-700'>DiverseHQ is a place where you get Value out of sharing your creativity, skills, and interests.</div>
         <ListOfCardComponents />
-      </div>
+      </div> */}
     </div>
   )
 }
