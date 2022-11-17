@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import '../styles/globals.css'
-import {NextSeo} from 'next-seo'
+import { NextSeo } from 'next-seo'
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return <>
   <Head>
     <title>DiverseHQ</title>
   </Head>
-  <NextSeo 
+  <NextSeo
   title="DiverseHQ"
   description='Join communities, express your creativity, and get noticed for your work!'
   openGraph={{
@@ -20,19 +20,19 @@ function MyApp({ Component, pageProps }) {
         url: 'https://diversehq.xyz/vector-bg.png',
         width: 1200,
         height: 630,
-        alt: 'DiverseHQ',
-      },
-    ],
+        alt: 'DiverseHQ'
+      }
+    ]
   }}
   twitter={{
     handle: '@useDiverseHQ',
-    cardType: 'summary_large_image',
+    cardType: 'summary_large_image'
   }}
   />
   <div className="text-black">
   <Component {...pageProps} />
   </div>
-  </> 
+  </>
 }
 
 export default MyApp

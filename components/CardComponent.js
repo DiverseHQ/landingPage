@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const CardComponent = ({card}) => {
+const CardComponent = ({ card }) => {
   return (
     <div className='w-[450px] h-[350px] p-6 m-3 rounded-3xl border-8 border-purple-300'>
         <div className='flex flex-row justify-between items-center'>

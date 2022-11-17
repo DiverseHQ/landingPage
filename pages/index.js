@@ -1,18 +1,11 @@
 import React from 'react'
-import CenterContent from '../components/CenterContent'
-import ListOfCardComponents from '../components/ListOfCardComponents'
-import NavBar from '../components/NavBar'
 import DiverseHQIntroPanel from '../components/new/DiverseHQIntroPanel'
 import FeaturesSection from '../components/new/FeaturesSection'
 import LandingSection from '../components/new/LandingSection'
 import SocialAndFooter from '../components/new/SocialAndFooter'
 import TeamSection from '../components/new/TeamSection'
-import PrimaryBtn from '../components/PrimaryBtn'
 
-export default function Home() {
-  const open = () => {
-    window.open("https://app.diversehq.xyz/");
-  }
+export default function Home () {
   return (
     <div>
       <LandingSection />
