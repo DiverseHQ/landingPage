@@ -4,49 +4,57 @@ import { BsTwitter, BsInstagram } from "react-icons/bs";
 
 const SocialAndFooter = () => {
   return (
-    <div className="flex flex-col">
-      <div className="flex  flex-row justify-around items-center  place-self-center w-2/3  border rounded-t-full  bg-purple-200 p-2">
+    <div className="flex flex-col mt-[300px]">
+      <div className="flex flex-row justify-around items-center  place-self-center w-2/3 h-[80px]  border rounded-t-full  bg-s-bg p-2">
         <a>
-          <FaDiscord className="w-10 h-10 " />
+          <FaDiscord className="w-14 h-14 " />
+        </a>
+        <a
+          href="https://twitter.com/useDiverseHQ"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          <BsTwitter className="h-12 w-12" />
         </a>
         <a>
-          <BsTwitter className="h-9 w-9" />
+          <BsInstagram className="w-12 h-12" />
         </a>
         <a>
-          <BsInstagram className="w-9 h-9" />
-        </a>
-        <a>
-          <FaTelegramPlane className="w-9 h-9" />
+          <FaTelegramPlane className="w-12 h-12" />
         </a>
       </div>
 
-      <div className="flex flex-row text-center bg-cyan-600 justify-start p-2">
+      <div className="flex flex-row bg-p-bg justify-start p-14">
         <div
           className="items-center
-            justify-center mx-3 p-3"
+             mx-3"
         >
           <ul>
-            <h6 className="items-center mb-1 font-semibold">Quick Links</h6>
+            <h6 className="mb-6 text-3xl">Quick Links</h6>
           </ul>
-          <ul>
-            <a href="#">Home</a>
-          </ul>
-          <ul>
-            <a href="#">Blog</a>
-          </ul>
-          <ul>
-            <a href="#">Feature</a>
-          </ul>
-          <ul>
-            <a href="#">Whitepaper</a>
-          </ul>
+          <div className="text-2xl ">
+            <ul className="hover:underline">
+              <a href="#">Home</a>
+            </ul>
+            <ul className="hover:underline">
+              <a href="#">Blog</a>
+            </ul>
+            <ul className="hover:underline">
+              <a href="#">Feature</a>
+            </ul>
+            <ul className="hover:underline">
+              <a href="#">Whitepaper</a>
+            </ul>
+          </div>
         </div>
-        <div className="items-center justify-center p-3">
+        <div className="items-center justify-center ml-[258px]">
           <ul>
-            <h6 className="items-center mb-1 font-semibold">Contack US</h6>
+            <h6 className="items-center mb-1 text-3xl mb-6">Contack US</h6>
           </ul>
-          <ul>
-            <a>diversehq.xyz@gmail.com</a>
+          <ul className="text-2xl hover:underline">
+            <a href="mailto:diveresehq.xyz@gmail.com">
+              diversehq.xyz@gmail.com
+            </a>
           </ul>
         </div>
       </div>

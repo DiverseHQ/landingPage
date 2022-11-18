@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors: {
         "p-h": "var(--purple-color)",
+        "s-h": "var(--pink-color)",
+        "p-bg": "var(--purple-bg)",
+        "s-bg": "var(--dark-purple-bg)",
       },
     },
   },
