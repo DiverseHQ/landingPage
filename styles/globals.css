@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .background-gradient{
+        background: linear-gradient(272.77deg, #C987E9 0%, #96CDFF 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    .image-unselectable{
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .background-blurred{
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+:root {
+    --pink-color: rgba(176, 21, 250, 0.9);
+    --blue-color: #B0CAFF;
+    --purple-color: #9378D8;
+    --primary-text: black;
+}

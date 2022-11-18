@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import PropTypes from 'prop-types'
 import React from 'react'
 
 const CardComponent = ({ card }) => {
@@ -17,6 +18,10 @@ const CardComponent = ({ card }) => {
                 </div>
     </div>
   )
+}
+
+CardComponent.propTypes = {
+  card: PropTypes.object.isRequired
 }
 
 export default CardComponent

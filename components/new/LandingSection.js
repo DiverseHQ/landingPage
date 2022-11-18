@@ -1,9 +1,26 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-const LandingSection = () => {
+import MainArea from "../landingSection/MainArea";
+import NewNavBar from "../landingSection/NewNavBar";
+import DiverseHQIntroDiv from "../landingSection/DiverseHQIntroDiv";
+
+const LandingSection = ({ featureSectionRef, teamSectionRef }) => {
   return (
-    <div>LandingSection</div>
-  )
-}
+    <div className="h-fit">
+      <NewNavBar
+        featureSectionRef={featureSectionRef}
+        teamSectionRef={teamSectionRef}
+      />
+      <DiverseHQIntroDiv />
+      <MainArea />
+    </div>
+  );
+};
 
-export default LandingSection
+LandingSection.propTypes = {
+  featureSectionRef: PropTypes.object.isRequired,
+  teamSectionRef: PropTypes.object.isRequired,
+};
+
+export default LandingSection;
