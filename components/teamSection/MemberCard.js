@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const MemberCard = ({ image, name, bio }) => {
   return (
-    <div className="flex flex-row items-center border rounded-[20px] sm:rounded m-3 sm:m-9 w-[150px] sm:w-[500px] h-[65px] sm:h-[220px] bg-p-bg rounded-[60px] p-3 sm:p-6">
+    <div className="flex flex-row items-center border rounded-[20px] sm:rounded m-3 sm:m-9 w-[150px] sm:w-[500px] h-[65px] sm:h-[220px] bg-p-bg sm:rounded-[60px] p-3 sm:p-6">
       <img
         src={image}
         alt="avatar"

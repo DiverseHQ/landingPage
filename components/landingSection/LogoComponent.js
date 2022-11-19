@@ -1,7 +1,7 @@
 import React from 'react'
 const LogoComponent = () => {
   return (
-    <div className="flex flex-row justify-center items-center border-2 rounded-full border-p-border  h-fit">
+    <div className="flex flex-row justify-center items-center border-2 rounded-full border-p-border w-fit  h-fit">
       <img
         src="/logo.png"
         className="rounded-full w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]"
