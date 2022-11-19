@@ -1,6 +1,6 @@
-import React from "react";
-import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
-import { BsTwitter, BsInstagram } from "react-icons/bs";
+import React from 'react'
+import { FaDiscord, FaTelegramPlane } from 'react-icons/fa'
+import { BsTwitter, BsInstagram } from 'react-icons/bs'
 
 const SocialAndFooter = () => {
   return (
@@ -11,7 +11,7 @@ const SocialAndFooter = () => {
         </a>
         <a
           href="https://twitter.com/useDiverseHQ"
-          target={"_blank"}
+          target={'_blank'}
           rel="noreferrer"
         >
           <BsTwitter className="h-12 w-12" />
@@ -48,8 +48,8 @@ const SocialAndFooter = () => {
           </div>
         </div>
         <div className="items-center justify-center ml-[258px]">
-          <ul>
-            <h6 className="items-center mb-1 text-3xl mb-6">Contack US</h6>
+          <ul className="mb-6">
+            <h6 className="items-center mb-1 text-3xl">Contack US</h6>
           </ul>
           <ul className="text-2xl hover:underline">
             <a href="mailto:diveresehq.xyz@gmail.com">
@@ -59,7 +59,7 @@ const SocialAndFooter = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SocialAndFooter;
+export default SocialAndFooter
