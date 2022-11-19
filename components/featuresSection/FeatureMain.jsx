@@ -5,7 +5,7 @@ import ContentBlock from './ContentBlock'
 const FeatureMain = () => {
   const { isMobile } = useWindowSize()
   return (
-    <div className="relative w-full h-[500px] sm:h-[1000px]">
+    <div className="relative w-full h-[500px] sm:h-[1200px]">
       <img
         src={isMobile ? '/leftBlobMobile.png' : '/leftBlob.png'}
         className="absolute top-[70px] sm:top-[200px] left-3 sm:left-0"
@@ -34,8 +34,8 @@ const FeatureMain = () => {
       </div>
       <div className="absolute top-[360px] sm:top-[1060px] right-[30px] sm:right-[280px]">
         <ContentBlock
-          title="Create Community"
-          body="Develop a niche community.Deep dive into things and promote with those who have similar interests."
+          title="Something for everyone"
+          body="The primary goal is to assist independent artists, creators, builders, and journalists in sharing  their work and receiving recognition in tokens."
         />
       </div>
     </div>
