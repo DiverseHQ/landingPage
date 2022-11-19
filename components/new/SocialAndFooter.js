@@ -5,7 +5,7 @@ import LogoComponent from '../landingSection/LogoComponent'
 
 const SocialAndFooter = () => {
   return (
-    <div className="flex flex-col mt-[150px] ms:mt-[300px]">
+    <div className="flex flex-col mt-[100px] ms:mt-[300px]">
       <div className="flex flex-row justify-around items-center  place-self-center w-2/3 h-[30px] sm:h-[80px]  border rounded-t-[15px] sm:rounded-t-full  bg-s-bg p-1 sm:p-2">
         <a>
           <FaDiscord className="w-7 h-7 sm:w-14 sm:h-14 " />
