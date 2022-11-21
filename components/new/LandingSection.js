@@ -6,7 +6,6 @@ import NewNavBar from '../landingSection/NewNavBar'
 import DiverseHQIntroDiv from '../landingSection/DiverseHQIntroDiv'
 
 const LandingSection = ({ featureSectionRef, teamSectionRef }) => {
-  console.log('rendered landingSection')
   return (
     <div className="h-fit">
       <NewNavBar

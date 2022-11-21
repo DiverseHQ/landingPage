@@ -1,22 +1,29 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { GrMenu } from 'react-icons/gr'
-import { ImCross } from 'react-icons/Im'
 
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
+import MenuDrawer from './MenuDrawer'
 
 const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
+  const [hambergerState, setHambergerState] = useState(false)
+  const { isMobile } = useWindowSize()
   const onClickFeatures = () => {
     featureSectionRef.current.scrollIntoView({ behavior: 'smooth' })
   }
-  const [hambergerState, setHambergerState] = useState(false)
   const onClickTeam = () => {
     teamSectionRef.current.scrollIntoView({ behavior: 'smooth' })
   }
-  const { isMobile } = useWindowSize()
+  const toggleHamberger = () => {
+    setHambergerState(!hambergerState)
+  }
   return (
     <>
+      <MenuDrawer
+        hambergerState={hambergerState}
+        setHambergerState={setHambergerState}
+      />
       {!isMobile && (
         <div className="w-full flex flex-row justify-between items-center border-b border-[#999292] px-6 absolute z-30">
           <LogoComponent />
@@ -50,39 +57,9 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
           <LogoComponent />
           <div>
             <section className="flex">
-              <button onClick={() => setHambergerState(!hambergerState)}>
+              <button onClick={toggleHamberger}>
                 <GrMenu className="w-6 h-6" />
               </button>
-              {hambergerState && (
-                <div className={`top-0 right-0  w-[64vw] h-screen fixed  flex flex-col bg-p-bg border rounded-l-2xl z-40  absolute transition ease-in-out  duration-300 ${hambergerState ? "translate-x-0" : "translate-x-full" } `}>
-                  <button
-                    className="self-end mr-5 mt-5 right-10 top-6 "
-                    onClick={() => setHambergerState(!hambergerState)}
-                  >
-                    <ImCross className="w-6 h-6" />
-                  </button>
-                  <div className="flex flex-col mt-16 ml-6">
-                  <a href="#" className="text-xl font-medium">
-                    Community
-                  </a>
-                  <a
-                    href="#"
-                    className="text-xl font-medium mt-6"
-                  >
-                    Team
-                  </a>
-                  <a href="#" className="text-xl font-medium mt-6">
-                    Blog
-                  </a>
-                  <a href="#" className="text-xl font-medium mt-6">
-                    Features
-                  </a>
-                  <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-6 max-w-xs mr-1"> 
-                    Launch App
-                  </button>
-                  </div>
-                </div>
-              )}   
             </section>
           </div>
         </div>
