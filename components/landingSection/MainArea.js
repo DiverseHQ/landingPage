@@ -28,7 +28,7 @@ const MainArea = () => {
           <div className="text-base text-p-h font-[500]">Socialize</div>
         </div>
       )}
-      <div className="absolute top-[263px] right-10 sm:top-[497px] sm:right-[90px] z-20">
+      <div className="absolute top-[263px] right-10 sm:top-[497px] sm:right-[90px] ">
         <div className="flex flex-col items-start">
           <div className="background-gradient font-[500] text-base sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 rounded-full mb-3 sm:mb-8">
             Start Creating

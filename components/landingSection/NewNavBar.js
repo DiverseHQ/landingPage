@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import { GrMenu } from 'react-icons/gr'
+import {ImCross} from 'react-icons/Im'
 
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
@@ -9,6 +10,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
   const onClickFeatures = () => {
     featureSectionRef.current.scrollIntoView({ behavior: 'smooth' })
   }
+const [hambergerState, setHambergerState] = useState(false)
   const onClickTeam = () => {
     teamSectionRef.current.scrollIntoView({ behavior: 'smooth' })
   }
@@ -46,7 +48,34 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
       {isMobile && (
         <div className="flex flex-row items-center justify-between h-14 bg-p-bg rounded-b-[20px] p-3 absolute w-full z-10">
           <LogoComponent />
-          <GrMenu className="w-6 h-6" />
+          <nav>
+            <section className="flex">
+              <button onClick={() => setHambergerState(!hambergerState)}><GrMenu className="w-6 h-6" /></button>
+              {
+                hambergerState && (
+
+              <nav className="h-screen  top-[0px] right-[0px] flex flex-col justify-around items-center w-full md:hidden bg-p-bg border z-60 duration-1000 absolute ">
+          <button className="self-end mr-10" onClick={() => setHambergerState(!hambergerState)}><ImCross className="w-6 h-6" /></button>
+          <a href="#" className="underline decoration-2 text-lg">
+            Community
+          </a>
+          <a href="#" className=" underline decoration- decoration-2 text-lg">
+            Team
+          </a>
+          <a href="#" className="underline decoration-2 text-lg">
+            Blog
+          </a>
+          <a href="#" className="underline decoration-2 text-lg">
+            Features
+          </a>
+          
+        </nav>
+                )
+              }
+
+            </section>
+          </nav>
+        
         </div>
       )}
     </>
