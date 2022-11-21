@@ -54,30 +54,35 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
                 <GrMenu className="w-6 h-6" />
               </button>
               {hambergerState && (
-                <div className="h-screen  top-[0px] right-[0px] flex flex-col justify-around items-center w-full md:hidden bg-p-bg border z-30 duration-1000 absolute ">
+                <div className={`top-0 right-0  w-[64vw] h-screen fixed  flex flex-col bg-p-bg border rounded-l-2xl z-40  absolute transition ease-in-out  duration-300 ${hambergerState ? "translate-x-0" : "translate-x-full" } `}>
                   <button
-                    className="self-end mr-10"
+                    className="self-end mr-5 mt-5 right-10 top-6 "
                     onClick={() => setHambergerState(!hambergerState)}
                   >
                     <ImCross className="w-6 h-6" />
                   </button>
-                  <a href="#" className="underline decoration-2 text-lg">
+                  <div className="flex flex-col mt-16 ml-6">
+                  <a href="#" className="text-xl font-medium">
                     Community
                   </a>
                   <a
                     href="#"
-                    className=" underline decoration- decoration-2 text-lg"
+                    className="text-xl font-medium mt-6"
                   >
                     Team
                   </a>
-                  <a href="#" className="underline decoration-2 text-lg">
+                  <a href="#" className="text-xl font-medium mt-6">
                     Blog
                   </a>
-                  <a href="#" className="underline decoration-2 text-lg">
+                  <a href="#" className="text-xl font-medium mt-6">
                     Features
                   </a>
+                  <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-6 max-w-xs mr-1"> 
+                    Launch App
+                  </button>
+                  </div>
                 </div>
-              )}
+              )}   
             </section>
           </div>
         </div>
