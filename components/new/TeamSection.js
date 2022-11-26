@@ -47,11 +47,7 @@ const TeamSection = () => {
           </>
         )}
         <div className="self-start sm:self-center ml-10 sm:ml-0">
-          <MemberCard
-            image="/Kirrttiraj.jpg"
-            name={'Taha'}
-            bio={'Community dev'}
-          />
+          <MemberCard image="/taha.png" name={'Taha'} bio={'Community dev'} />
         </div>
       </section>
     </div>

@@ -30,9 +30,11 @@ const MainArea = () => {
       )}
       <div className="absolute top-[263px] right-10 sm:top-[497px] sm:right-[90px] ">
         <div className="flex flex-col items-start">
-          <div className="background-gradient font-[500] text-base sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 rounded-full mb-3 sm:mb-8">
-            Start Creating
-          </div>
+          <a href="https://forms.gle/kjAJFHQexzamtsKt5">
+            <div className="background-gradient font-[500] text-base sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 rounded-full mb-3 sm:mb-8">
+              Start Creating
+            </div>
+          </a>
           <div>
             <div className="flex flex-row items-center">
               <div className="rounded-full w-3 h-3 sm:w-6 sm:h-6 bg-p-h" />

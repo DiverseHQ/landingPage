@@ -28,9 +28,15 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
         <div className="w-full flex flex-row justify-between items-center border-b border-[#999292] px-6 absolute z-30">
           <LogoComponent />
           <div className="flex flex-row items-center justify-center gap-x-11">
-            <div className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
-              Community
-            </div>
+            <a
+              href="https://discord.gg/CwKq8Q8UcT"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <div className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
+                Community
+              </div>
+            </a>
             <div
               className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
               onClick={onClickTeam}

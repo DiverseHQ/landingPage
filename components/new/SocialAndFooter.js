@@ -7,7 +7,11 @@ const SocialAndFooter = () => {
   return (
     <div className="flex flex-col mt-[100px] ms:mt-[300px]">
       <div className="flex flex-row justify-around items-center  place-self-center w-2/3 h-[30px] sm:h-[80px]  border rounded-t-[15px] sm:rounded-t-full  bg-s-bg p-1 sm:p-2">
-        <a>
+        <a
+          href="https://discord.gg/CwKq8Q8UcT"
+          target={'_blank'}
+          rel="noreferrer"
+        >
           <FaDiscord className="w-7 h-7 sm:w-14 sm:h-14 " />
         </a>
         <a
@@ -45,7 +49,13 @@ const SocialAndFooter = () => {
                 <a href="#">Feature</a>
               </ul>
               <ul className="hover:underline">
-                <a href="#">Whitepaper</a>
+                <a
+                  href="https://diversehq.gitbook.io/"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
+                  Whitepaper
+                </a>
               </ul>
             </div>
           </div>
