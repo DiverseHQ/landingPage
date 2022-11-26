@@ -23,6 +23,8 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
       <MenuDrawer
         hambergerState={hambergerState}
         setHambergerState={setHambergerState}
+        onClickTeam={onClickTeam}
+        onClickFeatures={onClickFeatures}
       />
       {!isMobile && (
         <div className="w-full flex flex-row justify-between items-center border-b border-[#999292] px-6 absolute z-30">

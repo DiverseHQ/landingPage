@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <NextSeo
         title="DiverseHQ"
-        description="Join communities, express your creativity, and get noticed for your work!"
+        description="Join communities, express your creativity, and get rewards for your work!"
         openGraph={{
           type: 'website',
           locale: 'en_US',
