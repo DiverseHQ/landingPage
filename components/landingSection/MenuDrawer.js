@@ -37,9 +37,11 @@ const MenuDrawer = ({
         <div className="flex flex-col mt-16 ml-6">
           <a
             href="https://discord.gg/CwKq8Q8UcT"
+            target={'_blank'}
             className="text-xl font-medium"
+            rel="noreferrer"
           >
-            Community
+            Discord
           </a>
           <div onClick={onClickTeam} className="text-xl font-medium mt-6">
             Team

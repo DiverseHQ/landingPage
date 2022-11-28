@@ -10,46 +10,48 @@ const MainArea = () => {
       {!isMobile && (
         <div className="text-p-h absolute text-8xl top-[234px] left-[99px] z-20 flex flex-row items-start font-bold">
           <div className="pr-6 flex flex-col items-center justify-center">
-            <div>Create</div>
+            <div>Build</div>
             <div className="border-p-h border w-[250px] font-normal" />
-            <div className="text-3xl">Comment</div>
+            <div className="text-3xl pb-1">Manage</div>
             <div className="border border-p-h w-[180px] font-normal" />
-            <div className="text-3xl">Socialize</div>
+            <div className="text-3xl">Grow</div>
           </div>
-          <div className="font-bold"> to Earn </div>
+          <div className="font-bold"> Communities</div>
         </div>
       )}
       {isMobile && (
         <div className="flex flex-col justify-center alignt-start absolute top-[112px] left-10">
-          <div className="text-base text-p-h font-[500]">Comment</div>
+          <div className="text-base text-p-h font-[500]">Manage</div>
           <div className="border-p-h border-b w-[70px] font-normal" />
-          <div className="text-3xl text-p-h font-[500]">Create To Earn</div>
+          <div className="text-3xl text-p-h font-[500]">Build Communities</div>
           <div className="border-p-h border-b w-[70px] font-normal" />
-          <div className="text-base text-p-h font-[500]">Socialize</div>
+          <div className="text-base text-p-h font-[500]">Grow</div>
         </div>
       )}
-      <div className="absolute top-[263px] right-10 sm:top-[497px] sm:right-[90px] ">
+      <div className="absolute top-[260px] right-5 sm:top-[497px] sm:right-[90px] ">
         <div className="flex flex-col items-start">
           <a href="https://forms.gle/kjAJFHQexzamtsKt5">
             <div className="background-gradient font-[500] text-base sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 rounded-full mb-3 sm:mb-8">
               Start Creating
             </div>
           </a>
-          <div>
+          <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center">
               <div className="rounded-full w-3 h-3 sm:w-6 sm:h-6 bg-p-h" />
-              <div className="text-xs sm:text-3xl ml-2">Join Communities</div>
-            </div>
-            <div className="flex flex-row items-center">
-              <div className="rounded-full w-3 h-3 sm:w-6 sm:h-6 bg-p-h" />
-              <div className="text-xs sm:text-3xl ml-2">
-                Express Your Creativity
+              <div className="text-xs sm:text-3xl ml-3">
+                Become BetaTester👆
               </div>
             </div>
             <div className="flex flex-row items-center">
               <div className="rounded-full w-3 h-3 sm:w-6 sm:h-6 bg-p-h" />
-              <div className="text-xs sm:text-3xl ml-2">
-                Get noticed for your work!
+              <div className="text-xs sm:text-3xl ml-3">
+                Check Discord for Updates ✅
+              </div>
+            </div>
+            <div className="flex flex-row items-center">
+              <div className="rounded-full w-3 h-3 sm:w-6 sm:h-6 bg-p-h" />
+              <div className="text-xs sm:text-3xl ml-3">
+                Get access to Beta platform 🅱️
               </div>
             </div>
           </div>
@@ -64,7 +66,7 @@ const MainArea = () => {
       />
       <img
         src="/3dIllustrator.png"
-        className="absolute top-[300px] left-[-30px] sm:top-[425px] sm:left-[50px] "
+        className="absolute top-[350px] left-[-30px] sm:top-[425px] sm:left-[50px] "
       />
       {/* <img src="/rightCircle.svg" className='absolute w-[400px] h-[400px] top-[938px] right-[-50px] image-unselectable'/> */}
     </div>
