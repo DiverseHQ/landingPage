@@ -19,10 +19,6 @@ const useWindowSize = () => {
       setIsMobile(false)
     }
   }
-
-  if (typeof window !== 'undefined') {
-    handleResize()
-  }
   useEffect(() => {
     // Add event listener
     window.addEventListener('resize', handleResize)
