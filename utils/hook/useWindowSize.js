@@ -6,20 +6,24 @@ const useWindowSize = () => {
     height: undefined
   })
   const [isMobile, setIsMobile] = useState(false)
-  useEffect(() => {
-    const handleResize = () => {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
-      if (window.innerWidth < 768) {
-        setIsMobile(true)
-      } else {
-        setIsMobile(false)
-      }
-    }
 
+  const handleResize = () => {
+    // Set window width/height to state
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
+    if (window.innerWidth < 768) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    handleResize()
+  }
+  useEffect(() => {
     // Add event listener
     window.addEventListener('resize', handleResize)
 
