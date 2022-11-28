@@ -4,7 +4,7 @@ import useWindowSize from '../../utils/hook/useWindowSize'
 
 const MainArea = () => {
   const { isMobile } = useWindowSize()
-
+  console.log(isMobile)
   return (
     <div className="h-fit w-full relative">
       {!isMobile && (
