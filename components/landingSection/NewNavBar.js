@@ -5,6 +5,8 @@ import { GrMenu } from 'react-icons/gr'
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
 import MenuDrawer from './MenuDrawer'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
   const [hambergerState, setHambergerState] = useState(false)
@@ -18,8 +20,33 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
   const toggleHamberger = () => {
     setHambergerState(!hambergerState)
   }
+
+  const notifyInfo = (text) =>
+    toast.info(text, {
+      position: 'top-center',
+      autoClose: 10000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light'
+    })
+
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <MenuDrawer
         hambergerState={hambergerState}
         setHambergerState={setHambergerState}
@@ -33,26 +60,43 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
               target={'_blank'}
               rel="noreferrer"
             >
-              <div className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
-                Community
+              <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
+                Discord
               </div>
             </a>
             <div
-              className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
+              className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
               onClick={onClickTeam}
             >
               Team
             </div>
-            <div className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
+            <a
+              href="https://diversehq.gitbook.io/whitepaper/"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
+                Whitepaper
+              </div>
+            </a>
+            <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
               Blog
             </div>
+
             <div
-              className="text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
+              className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
               onClick={onClickFeatures}
             >
               Features
             </div>
-            <div className="background-gradient py-2 px-9 rounded-full text-xl leading-9">
+            <div
+              onClick={() => {
+                notifyInfo(
+                  `We are not ready yet, Please wait for our launch! Join our discord for more updates!`
+                )
+              }}
+              className="cursor-pointer background-gradient py-2 px-9 rounded-full text-xl leading-9"
+            >
               Launch APP
             </div>
           </div>

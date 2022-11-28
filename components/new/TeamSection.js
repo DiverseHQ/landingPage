@@ -16,12 +16,12 @@ const TeamSection = () => {
               image={
                 'https://cdn.discordapp.com/attachments/1014407377056968754/1043118148926312528/WFDFwC_I_400x400.jpg'
               }
-              name={'Deven Rathod'}
+              name={'rathod.lens'}
               bio={'Creative dev'}
             />
             <MemberCard
               image="/Kirrttiraj.jpg"
-              name={'Kirrttiraj'}
+              name={'boredhead.lens'}
               bio={'Frontend dev'}
             />
           </div>
@@ -33,14 +33,14 @@ const TeamSection = () => {
                 image={
                   'https://cdn.discordapp.com/attachments/1014407377056968754/1043118148926312528/WFDFwC_I_400x400.jpg'
                 }
-                name={'Deven Rathod'}
+                name={'rathod.lens'}
                 bio={'Creative dev'}
               />
             </div>
             <div className="self-end mr-10">
               <MemberCard
                 image="/Kirrttiraj.jpg"
-                name={'Kirrttiraj'}
+                name={'boredhead.lens'}
                 bio={'Frontend dev'}
               />
             </div>

@@ -14,28 +14,28 @@ const FeatureMain = () => {
         src={isMobile ? '/rightBlobMobile.png' : '/rightBlob.png'}
         className="absolute top-[265px] sm:top-[628px] right-[140px] sm:right-[371px]"
       />
-      <div className="absolute top-[60px] sm:top-[190px] left-[100px] sm:left-[464px]">
+      <div className="absolute top-[20px] sm:top-[190px] left-[100px] sm:left-[464px]">
         <ContentBlock
-          title="Sharing is Earning"
-          body="Creating a positive sum game for everyone and rewarding users for posting their content."
+          title="😎 Cool Communities"
+          body="Create and join communities of people who share your interests. Create exclusive community and let token holders post and access content."
         />
       </div>
-      <div className="absolute top-[155px] sm:top-[650px] left-[50px] sm:left-[155px]">
+      <div className="absolute top-[165px] sm:top-[650px] left-[50px] sm:left-[155px]">
         <ContentBlock
-          title="Useful content"
-          body="Make your content discoverable using the power of community."
+          title="🌿 Levitating Lens"
+          body="We use the most popular and amazing decentralized social graph. Lens will keep your followers, follows and posts on the blockchain."
         />
       </div>
-      <div className="absolute top-[255px] sm:top-[620px] right-[10px] sm:right-[120px]">
+      <div className="absolute top-[230px] sm:top-[620px] right-[10px] sm:right-[120px]">
         <ContentBlock
-          title="Create Community"
-          body="Develop a niche community.Deep dive into things and promote with those who have similar interests."
+          title="💰 Make Money"
+          body="Post anything from your ebook, illustration, 3d models, or nfts on applicable communities to sell it. Only buyers will have access to it but will get exposure to entire community."
         />
       </div>
       <div className="absolute top-[360px] sm:top-[1060px] right-[30px] sm:right-[280px]">
         <ContentBlock
-          title="Something for everyone"
-          body="The primary goal is to assist independent artists, creators, builders, and journalists in sharing  their work and receiving recognition in tokens."
+          title="🛹 Advent Actions"
+          body="Create and join content tournaments of your community, and get rewarded for winning. Create and participate in the decision-making Voting process."
         />
       </div>
     </div>

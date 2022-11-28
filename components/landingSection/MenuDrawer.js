@@ -30,8 +30,13 @@ const MenuDrawer = ({ hambergerState, setHambergerState }) => {
           <ImCross className="w-6 h-6" />
         </button>
         <div className="flex flex-col mt-16 ml-6">
-          <a href="#" className="text-xl font-medium">
-            Community
+          <a
+            href="https://discord.gg/CwKq8Q8UcT"
+            target={'_blank'}
+            className="text-xl font-medium"
+            rel="noreferrer"
+          >
+            Discord
           </a>
           <a href="#" className="text-xl font-medium mt-6">
             Team

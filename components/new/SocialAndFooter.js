@@ -21,7 +21,11 @@ const SocialAndFooter = () => {
         >
           <BsTwitter className="w-5 h-5 sm:h-12 sm:w-12" />
         </a>
-        <a>
+        <a
+          href="https://instagram.com/diversehq_"
+          target={'_blank'}
+          rel="noreferrer"
+        >
           <BsInstagram className="w-5 h-5 sm:w-12 sm:h-12" />
         </a>
         <a>
