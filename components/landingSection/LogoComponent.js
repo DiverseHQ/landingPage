@@ -1,12 +1,12 @@
 import React from 'react'
 const LogoComponent = () => {
   return (
-    <div className="flex flex-row justify-center items-center border-2 rounded-full border-p-border w-fit  h-fit">
+    <div className="flex flex-row justify-center items-center border-2 rounded-full border-p-h h-fit w-fit">
       <img
         src="/logo.png"
         className="rounded-full w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]"
       />
-      <div className="text-xs sm:text-xl mx-1 sm:mx-2">Diverse HQ</div>
+      <div className="text-xs sm:text-2xl mx-2 sm:ml-2 sm:mr-4">Diverse HQ</div>
     </div>
   )
 }
