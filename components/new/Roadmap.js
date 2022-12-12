@@ -1,16 +1,20 @@
 import React from 'react'
 
 const Roadmap = () => {
-
   return (
     <div className="flex flex-col mt-16 sm:mt-32">
       <div className="px-4 sm:px-5 text-lg font-[500] sm:text-6xl text-center relative flex flex-row justify-center mb-16 sm:mb-32">
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-l border-[#87C8D3]" />
-        <div className="mx-3 sm:mx-5 gradient-text font-bold">New Development Roadmap</div>
+        <div className="mx-3 sm:mx-5 gradient-text font-bold">
+          New Development Roadmap
+        </div>
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-r border-[#87C8D3]" />
       </div>
       <div className="timeline">
         <div classNameName="outer">
+          {/* <div className="card">
+            <div className="info"></div>
+          </div> */}
           <div className="card">
             <div className="info">
               <p className="title">Market Research</p>

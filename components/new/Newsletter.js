@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
-import useWindowSize from '../../utils/hook/useWindowSize'
 
 const Newsletter = () => {
-
-  const [email, setEmail] = useState("");
-
-  const { isMobile } = useWindowSize()
+  const [email, setEmail] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Submitted");
+    console.log('Submitted')
   }
 
   return (
     <div className="flex flex-col lg:flex-row center items-center border-solid border-2 border-[#D2DAFF] mx-12 my-16 rounded-[50px] p-4">
       {/* border: 2px solid #D2DAFF;
 border-radius: 0px 50px 50px 0px */}
-      <img src="/3dIllustrator.png" className="w-[303px] mr-2 md:mr-4 lg:mr-8" />
+      <img
+        src="/3dIllustrator.png"
+        className="w-[303px] mr-2 md:mr-4 lg:mr-8"
+      />
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className='flex-col mr:0 md:mr-8 px-4 sm:px-0'>
+        <div className="flex-col mr:0 md:mr-8 px-4 sm:px-0">
           <h3 className="text-[#000] font-semibold text-lg">
             Subscribe to our newsletter
           </h3>
@@ -27,7 +26,10 @@ border-radius: 0px 50px 50px 0px */}
             events!
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="justify-start md:justify-self-end flex  md:flex-row gap-1 sm:gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="justify-start md:justify-self-end flex  md:flex-row gap-1 sm:gap-4"
+        >
           <input
             placeholder="Enter your Email"
             type="email"
