@@ -14,7 +14,11 @@ const Roadmap = () => {
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-r border-[#87C8D3]" />
       </div>
       {!isMobile && (
-        <img className="p-12 lg:p-28" src="/roadmap.png" alt="roadmap" />
+        <img
+          className="image-unselectable p-12 lg:p-28"
+          src="/roadmap.png"
+          alt="roadmap"
+        />
       )}
       {isMobile && (
         <div className="timeline">
@@ -82,47 +86,6 @@ const Roadmap = () => {
           </div>
         </div>
       )}
-      {/* desktop timeline */}
-      {/* <div className="timeline">
-        <div classNameName="outer">
-          <div className="card">
-            <div className="info">
-              <p className="title">Market Research</p>
-              <p className="title">Project Brainstorming</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="info">
-              <p className="title">Release Social Media</p>
-              <p className="title">Team formation</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="info">
-              <p className="title">Release Landing Page</p>
-              <p className="title">Release Whitepaper</p>
-            </div>
-          </div>
-          <div className="card incomplete">
-            <div className="info">
-              <p className="title">Beta MVP Launch</p>
-              <p className="title">Launch Lens Integration</p>
-            </div>
-          </div>
-          <div className="card incomplete">
-            <div className="info">
-              <p className="title">Token Ulity</p>
-              <p className="title">Sell Digital Content</p>
-            </div>
-          </div>
-          <div className="card incomplete">
-            <div className="info">
-              <p className="title">Tournaments Feature</p>
-              <p className="title">Voting Feature</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }
