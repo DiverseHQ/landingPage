@@ -4,7 +4,7 @@ import FeaturesSection from '../components/new/FeaturesSection'
 import LandingSection from '../components/new/LandingSection'
 import SocialAndFooter from '../components/new/SocialAndFooter'
 import TeamSection from '../components/new/TeamSection'
-import Roadmap from "../components/new/Roadmap"
+import Roadmap from '../components/new/Roadmap'
 import Newsletter from '../components/new/Newsletter'
 import useWindowSize from '../utils/hook/useWindowSize'
 
