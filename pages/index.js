@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-// import DiverseHQIntroDiv from '../components/new/DiverseHQIntroDiv'
+import DiverseHQIntroDiv from '../components/new/DiverseHQIntroDiv'
+import PoweredBySection from '../components/new/PoweredBySection'
 import FeaturesSection from '../components/new/FeaturesSection'
 import LandingSection from '../components/new/LandingSection'
 import SocialAndFooter from '../components/new/SocialAndFooter'
@@ -18,7 +19,8 @@ export default function Home() {
         featureSectionRef={featureSectionRef}
         teamSectionRef={teamSectionRef}
       />
-      {/* <DiverseHQIntroDiv /> */}
+      <PoweredBySection />
+      <DiverseHQIntroDiv />
       <div className="relative">
         <div ref={featureSectionRef}>
           <FeaturesSection />

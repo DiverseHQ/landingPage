@@ -192,3 +192,133 @@
     padding: 10px;
   }
 }
+
+/* Powered By div */
+.powered-div {
+  min-width: 300px;
+  width: 80%;
+  border: 2px solid #B3B4F3;
+  padding: 82px 0 82px 44px;
+  border-width: 0px 0 2px 2px;
+  border-radius: 40px 0 40px 40px;
+}
+
+.powered-div::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #B3B4F3;
+  border-width: 0 2px 0 0;
+  border-radius: 40px 0 40px 40px;
+  padding: 82px 0 82px 44px;
+  right: 2px;
+  bottom: 5px;
+}
+
+.powered-icons {
+  transform: translate(50%, 125%);
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+@media only screen and (max-width: 800px) {
+  .powered-icons {
+    transform: translateY(325%);
+    bottom: 0;
+  }
+
+  .powered-div {
+    width: 90%;
+  }
+
+  .powered-div::before {
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .powered-icons {
+    transform: translateY(380%);
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .powered-icons {
+    transform: translateY(425%);
+    bottom: 0;
+  }
+}
+
+.powered-title { 
+  position: relative;
+}
+
+.powered-title::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  border: solid #B3B4F3;
+  border-width: 2px 0 0 0;
+  border-radius: 40px 0 0 0;
+  top: -83px;
+  left: -44px;
+  padding: 20px;
+}
+
+.powered-box {
+  position: relative;
+}
+
+.powered-box::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  border: solid #B3B4F3;
+  border-width: 2px 2px 2px 0;
+  border-radius: 0 40px 40px 0;
+  padding: 74px 0;
+  right: -80px;
+  top: 35px;
+}
+
+
+/* Introduction div */
+.intro {
+  min-width: 300px;
+  width: 80%;
+  border: 2px solid #DFE1FC;
+  padding: 55px 30px;
+  border-width: 0px 0 4px 4px;
+  border-radius: 40px 0 0 40px;
+}
+
+.intro-title {
+  position: relative;
+}
+
+.intro-title::before {
+  content: "";
+  width: 350px;
+  position: absolute;
+  border: solid #DFE1FC;
+  border-width: 4px 4px 0 0;
+  border-radius: 40px 40px 40px 0;
+  left: -29px;
+  top: -56px;
+  padding: 35px;
+}
+
+.intro-title::after {
+  content: "";
+  position: absolute;
+  border: solid #DFE1FC;
+  width: 140px;
+  bottom: 10px;
+  left: 180px;
+  padding: 35px;
+
+  border-width: 0 0 4px 0;
+  border-radius: 0 40px 40px 0;
+}
