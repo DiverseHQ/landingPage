@@ -8,27 +8,34 @@ import TeamSection from '../components/new/TeamSection'
 import Roadmap from '../components/new/Roadmap'
 import Newsletter from '../components/new/Newsletter'
 import useWindowSize from '../utils/hook/useWindowSize'
+import NewFeaturesSection from '../components/new/NewFeaturesSection'
+import NewFeatuersSectionMobile from '../components/new/NewFeatuersSectionMobile'
 
 export default function Home() {
   const featureSectionRef = useRef()
   const teamSectionRef = useRef()
+  const roadMapRef = useRef()
   const { isMobile } = useWindowSize()
   return (
     <div className="bg-l-bg">
       <LandingSection
         featureSectionRef={featureSectionRef}
         teamSectionRef={teamSectionRef}
+        roadMapRef={roadMapRef}
       />
       <PoweredBySection />
       <DiverseHQIntroDiv />
       <div className="relative">
         <div ref={featureSectionRef}>
-          <FeaturesSection />
+          {/* <FeaturesSection /> */}
+          {!isMobile && <NewFeaturesSection />}
+          {isMobile && <NewFeatuersSectionMobile />}
         </div>
         <div ref={teamSectionRef}>
           <TeamSection />
         </div>
-        {!isMobile && (
+        {/* todo circle */}
+        {/* {!isMobile && (
           <>
             <img
               src="/secondRightCurve.svg"
@@ -45,9 +52,11 @@ export default function Home() {
             src="/secondCurves.png"
             className="absolute top-0 left-0 w-full"
           />
-        )}
+        )} */}
       </div>
-      <Roadmap />
+      <div ref={roadMapRef}>
+        <Roadmap />
+      </div>
       <Newsletter />
       <SocialAndFooter />
       {/* <div className='h-screen'>

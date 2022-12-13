@@ -1,16 +1,17 @@
 import React from 'react'
 import { ImCross } from 'react-icons/im'
 import PropTypes from 'prop-types'
+import {
+  BLOG_LINK,
+  DISCORD_LINK,
+  TWITTER_LINK,
+  WHITEPAPER_LINK
+} from '../../utils/config/config'
 
-const MenuDrawer = ({
-  hambergerState,
-  setHambergerState,
-  onClickTeam,
-  onClickFeatures
-}) => {
+const MenuDrawer = ({ hambergerState, setHambergerState }) => {
   return (
     <div
-      className={`z-0 absolute top-0 left-0 right-0 bottom-0 w-full overflow-hidden ${
+      className={`text-black z-0 fixed top-0 left-0 right-0 bottom-0 w-full overflow-hidden ${
         hambergerState ? 'z-40' : ''
       }`}
     >
@@ -36,22 +37,36 @@ const MenuDrawer = ({
         </button>
         <div className="flex flex-col mt-16 ml-6">
           <a
-            href="https://discord.gg/CwKq8Q8UcT"
+            href={DISCORD_LINK}
             target={'_blank'}
             className="text-xl font-medium"
             rel="noreferrer"
           >
             Discord
           </a>
-          <div onClick={onClickTeam} className="text-xl font-medium mt-6">
-            Team
-          </div>
-          <a href="#" className="text-xl font-medium mt-6">
+
+          <a
+            href={TWITTER_LINK}
+            target={'_blank'}
+            className="text-xl font-medium mt-6"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
+
+          <a
+            href={WHITEPAPER_LINK}
+            target={'_blank'}
+            className="text-xl font-medium mt-6"
+            rel="noreferrer"
+          >
+            Whitepaper
+          </a>
+
+          <a href={BLOG_LINK} className="text-xl font-medium mt-6">
             Blog
           </a>
-          <div onClick={onClickFeatures} className="text-xl font-medium mt-6">
-            Features
-          </div>
+
           <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-6 max-w-xs mr-1">
             Launch App
           </button>

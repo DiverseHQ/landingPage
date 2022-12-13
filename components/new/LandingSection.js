@@ -6,12 +6,13 @@ import NewNavBar from '../landingSection/NewNavBar'
 import MainBlockArea from '../landingSection/MainBlockArea'
 // import DiverseHQIntroDiv from '../landingSection/DiverseHQIntroDiv'
 
-const LandingSection = ({ featureSectionRef, teamSectionRef }) => {
+const LandingSection = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   return (
-    <div className="h-[calc(100vh+75px)] bg-black text-white rounded-b-[75px]">
+    <div className="h-[calc(100vh+75px)] bg-black text-white rounded-b-[60px]  sm:rounded-b-[75px]">
       <NewNavBar
         featureSectionRef={featureSectionRef}
         teamSectionRef={teamSectionRef}
+        roadMapRef={roadMapRef}
       />
       <MainBlockArea />
       {/* <DiverseHQIntroDiv /> */}

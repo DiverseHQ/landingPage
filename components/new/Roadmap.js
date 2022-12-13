@@ -14,11 +14,13 @@ const Roadmap = () => {
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-r border-[#87C8D3]" />
       </div>
       {!isMobile && (
-        <img
-          className="image-unselectable p-12 lg:p-28"
-          src="/roadmap.png"
-          alt="roadmap"
-        />
+        <div className="w-full flex flex-row justify-center">
+          <img
+            className="image-unselectable w-[1200px] lg:p-28"
+            src="/roadmap.png"
+            alt="roadmap"
+          />
+        </div>
       )}
       {isMobile && (
         <div className="timeline">

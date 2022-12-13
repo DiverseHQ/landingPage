@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { GrMenu } from 'react-icons/gr'
 
@@ -16,7 +16,7 @@ import {
   WHITEPAPER_LINK
 } from '../../utils/config/config'
 
-const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
+const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   const [hambergerState, setHambergerState] = useState(false)
   const { isMobile } = useWindowSize()
 
@@ -32,6 +32,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
   }
 
   const onClickRoadmap = () => {
+    roadMapRef.current.scrollIntoView({ behavior: 'smooth' })
     // todo
   }
 
@@ -123,7 +124,8 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
         prevScrollpos = window.pageYOffset
         return
       }
-      const mobileTopNavEl = document.getElementById('desktopNavBar')
+      const mobileTopNavEl = document.getElementsByClassName('navbar')[0]
+      console.log('mobileTopNavEl', mobileTopNavEl)
       if (!mobileTopNavEl) return
       const currentScrollPos = window.pageYOffset
       if (prevScrollpos > currentScrollPos) {
@@ -149,16 +151,15 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
         pauseOnHover
         theme="light"
       />
-      <MenuDrawer
-        hambergerState={hambergerState}
-        setHambergerState={setHambergerState}
-        onClickTeam={onClickTeam}
-        onClickFeatures={onClickFeatures}
-      />
+      {hambergerState && (
+        <MenuDrawer
+          hambergerState={hambergerState}
+          setHambergerState={setHambergerState}
+        />
+      )}
       {!isMobile && (
         <div
-          id="desktopNavBar"
-          className="fixed w-full flex flex-row justify-center items-center z-30 top-[50px] px-20"
+          className="navbar fixed w-full flex flex-row justify-center items-center z-30 top-[50px] px-20"
           style={{
             transition: 'top 0.5s ease-in-out'
           }}
@@ -171,40 +172,6 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
               <HoverDrawerDownMenuItem menuItem={aboutUsMenuItem} />
               <HoverDrawerDownMenuItem menuItem={communityMenuItem} />
 
-              {/* <a
-              href="https://discord.gg/CwKq8Q8UcT"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
-                Discord
-              </div>
-            </a>
-            <div
-              className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
-              onClick={onClickTeam}
-            >
-              Team
-            </div>
-            <a
-              href="https://diversehq.gitbook.io/whitepaper/"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
-                Whitepaper
-              </div>
-            </a>
-            <div className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6">
-              Blog
-            </div>
-
-            <div
-              className="cursor-pointer text-xl hover:text-p-h hover:border-b-4 hover:border-p-h hover:mb-[-4px] py-6"
-              onClick={onClickFeatures}
-            >
-              Features
-            </div> */}
               <div
                 onClick={() => {
                   notifyInfo(
@@ -220,14 +187,22 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
         </div>
       )}
       {isMobile && (
-        <div className="flex flex-row items-center justify-between h-14 bg-p-bg rounded-b-[20px] p-3 absolute w-full z-30">
-          <LogoComponent />
-          <div>
-            <section className="flex">
-              <button onClick={toggleHamberger}>
-                <GrMenu className="w-6 h-6" />
-              </button>
-            </section>
+        <div
+          style={{
+            transition: 'top 0.5s ease-in-out'
+          }}
+          className="navbar fixed top-[50px] flex flex-row items-center justify-between h-14 px-4 w-full z-30"
+        >
+          <div className="background-blurred-black p-2 px-4 rounded-full w-full flex flex-row justify-between items-center ">
+            <LogoComponent />
+            <div>
+              <section className="flex text-white">
+                <button onClick={toggleHamberger}>
+                  <img src="/hamburger.png" alt="hamburger" className="w-6" />
+                  {/* <GrMenu className="w-6 h-6" style={{ color: 'white' }} /> */}
+                </button>
+              </section>
+            </div>
           </div>
         </div>
       )}
@@ -240,4 +215,4 @@ NewNavBar.propTypes = {
   teamSectionRef: PropTypes.object.isRequired
 }
 
-export default NewNavBar
+export default memo(NewNavBar)
