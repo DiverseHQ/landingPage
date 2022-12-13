@@ -116,10 +116,13 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef }) => {
     ]
   }
 
-  let prevScrollpos = window.pageYOffset
-
-  if (window) {
+  if (typeof window !== 'undefined') {
+    let prevScrollpos = window ? window.pageYOffset : null
     window.onscroll = function () {
+      if (!prevScrollpos) {
+        prevScrollpos = window.pageYOffset
+        return
+      }
       const mobileTopNavEl = document.getElementById('desktopNavBar')
       if (!mobileTopNavEl) return
       const currentScrollPos = window.pageYOffset
