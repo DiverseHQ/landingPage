@@ -1,14 +1,17 @@
-import React from 'react'
+import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import React, { Suspense } from 'react'
+import Hovering3DObjects from './Hovering3DObjects'
 
 const MainBlockArea = () => {
   return (
-    <div className="flex flex-row w-full justify-between items-center pt-[300px] px-20">
-      <div className="flex flex-col justify-center items-start">
-        <div className="font-bold text-6xl mb-10 max-w-[650px]">
+    <div className="flex flex-row w-full justify-between items-center px-16">
+      <div className="flex flex-col justify-center items-start w-[550px]">
+        <div className="font-bold text-5xl mb-10 ">
           The Social Media based on Community
         </div>
         <div
-          className="font-bold text-xl mb-14 max-w-[750px]"
+          className="font-bold text-xl mb-14"
           style={{ letterSpacing: '2px' }}
         >
           DiverseHQ is new Generation of Social Media on Web3, that help to
@@ -18,7 +21,12 @@ const MainBlockArea = () => {
           Start Creating
         </button>
       </div>
-      <div>Todo 3d Canavas using Threejs</div>
+      <div
+        style={{ backgroundColor: 'transparent' }}
+        className="w-[900px] h-[900px]"
+      >
+        <Hovering3DObjects />
+      </div>
     </div>
   )
 }

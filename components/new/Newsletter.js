@@ -27,8 +27,8 @@ border-radius: 0px 50px 50px 0px */}
                 Subscribe to our newsletter
               </h3>
               <p>
-                Be the first to receive the latest Diverse HQ updates, news and
-                events!
+                Be the first to receive the latest news about Diverse HQ
+                updates, events and airdrops !
               </p>
             </div>
             <form
