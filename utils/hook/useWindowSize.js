@@ -30,9 +30,6 @@ const useWindowSize = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  console.log('isMobile', isMobile)
-  console.log('windowSize', windowSize)
-
   return { windowSize, isMobile }
 }
 export default useWindowSize
