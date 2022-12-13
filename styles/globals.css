@@ -192,3 +192,43 @@
     padding: 10px;
   }
 }
+
+
+/* Introduction div */
+.intro {
+  min-width: 300px;
+  width: 80%;
+  border: 2px solid #DFE1FC;
+  padding: 55px 30px;
+  border-width: 0px 0 4px 4px;
+  border-radius: 40px 0 0 40px;
+}
+
+.intro-title {
+  position: relative;
+}
+
+.intro-title::before {
+  content: "";
+  width: 350px;
+  position: absolute;
+  border: solid #DFE1FC;
+  border-width: 4px 4px 0 0;
+  border-radius: 40px 40px 40px 0;
+  left: -29px;
+  top: -56px;
+  padding: 35px;
+}
+
+.intro-title::after {
+  content: "";
+  position: absolute;
+  border: solid #DFE1FC;
+  width: 140px;
+  bottom: 10px;
+  left: 180px;
+  padding: 35px;
+
+  border-width: 0 0 4px 0;
+  border-radius: 0 40px 40px 0;
+}
