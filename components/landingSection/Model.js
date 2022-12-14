@@ -22,7 +22,7 @@ const Model = (props) => {
   // animation control
   const rotationSpeed = 0.001
   const sineAmplitude = 0.09
-  const scaleSpeed = 0.5
+  // const scaleSpeed = 0.5
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime()
 

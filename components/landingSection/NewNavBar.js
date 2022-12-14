@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
-import { GrMenu } from 'react-icons/gr'
+// import { GrMenu } from 'react-icons/gr'
 
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'

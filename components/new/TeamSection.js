@@ -5,7 +5,7 @@ import MemberCard from '../teamSection/MemberCard'
 const TeamSection = () => {
   const { isMobile } = useWindowSize()
   return (
-    <div className="flex flex-col sm:mt-[300px]">
+    <div className="flex flex-col sm:mt-[150px]">
       <h1 className="place-self-center text-2xl sm:text-7xl font-semibold  mb-9">
         Team Members
       </h1>

@@ -1,6 +1,6 @@
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+// import { OrbitControls } from '@react-three/drei'
+// import { Canvas } from '@react-three/fiber'
+import React from 'react'
 import { START_FORM_LINK } from '../../utils/config/config'
 import Hovering3DObjects from './Hovering3DObjects'
 
