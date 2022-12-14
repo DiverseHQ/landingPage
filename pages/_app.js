@@ -2,6 +2,7 @@ import Head from 'next/head'
 import '../styles/globals.css'
 import { NextSeo } from 'next-seo'
 import PropTypes from 'prop-types'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +14,19 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         ></meta>
       </Head>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+      />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+        `}
+      </Script>
       <NextSeo
         title="DiverseHQ"
         description="We believe access and reach is not just famous few, but for everyone. Join us in our mission to democratize to give power back to you."
