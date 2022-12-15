@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaDiscord, FaTelegramPlane } from 'react-icons/fa'
+import { FaDiscord } from 'react-icons/fa'
 import { BsTwitter, BsInstagram } from 'react-icons/bs'
 import LogoComponent from '../landingSection/LogoComponent'
 import {

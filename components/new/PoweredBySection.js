@@ -2,7 +2,7 @@ import React from 'react'
 
 const PoweredBySection = () => {
   return (
-    <div className="powered-div my-[150px] mx-4 sm:mx-8 md:mx-12 lg:mx-18 relative">
+    <div className="powered-div my-[150px] mx-4 sm:mx-8 md:mx-20 relative">
       <h2 className="powered-title text-2xl text-[#121315] mb-4 tracking-tight font-semibold">
         DiverseHQ powered By Polygon and LensProtcol{' '}
       </h2>{' '}
