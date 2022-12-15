@@ -10,44 +10,25 @@ const TeamSection = () => {
         Team Members
       </h1>
       <section className="flex flex-col items-center justify-center">
-        {!isMobile && (
-          <div className="flex flex-row itemse-center justify-center">
-            <MemberCard
-              image={'/rdPfp.png'}
-              name={'rathod.lens'}
-              bio={'Creative dev'}
-            />
-            <MemberCard
-              image={'kirtirajPfp.png'}
-              name={'boredhead.lens'}
-              bio={'Frontend dev'}
-            />
-          </div>
-        )}
-        {isMobile && (
-          <>
-            <div className="self-start ml-10">
-              <MemberCard
-                image={'rdPfp.png'}
-                name={'rathod.lens'}
-                bio={'Creative dev'}
-              />
-            </div>
-            <div className="self-end mr-10">
-              <MemberCard
-                image={'kirtirajPfp.png'}
-                name={'boredhead.lens'}
-                bio={'Frontend dev'}
-              />
-            </div>
-          </>
-        )}
-        <div className="self-start sm:self-center ml-10 sm:ml-0">
+        <div className="flex flex-row items-center justify-center">
+          <MemberCard
+            image={'/rdPfp.png'}
+            name={'rathod.lens'}
+            bio={'Creative dev'}
+          />
+          <MemberCard
+            image={'kirtirajPfp.png'}
+            name={'boredhead.lens'}
+            bio={'Frontend dev'}
+          />
+        </div>
+        <div className="flex flex-row items-center justify-center">
           <MemberCard
             image={'tahaPfp.jpg'}
             name={'tahakhak.lens'}
             bio={'Community dev'}
           />
+          <MemberCard image={'aliPfp.svg'} name={'ali'} bio={'Fullstack dev'} />
         </div>
       </section>
     </div>
