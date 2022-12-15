@@ -10,7 +10,7 @@ const NewFeatuersSectionMobile = () => {
       ImageComp: () => (
         <svg
           width="150"
-          height="180"
+          height="150"
           viewBox="0 0 54 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const NewFeatuersSectionMobile = () => {
     }
   ]
   return (
-    <div className="w-full bg-black rounded-t-[50px] rounded-b-[50px] p-4 mb-20">
+    <div className="w-full bg-black rounded-3xl p-4 mb-20">
       {data.map((item, index) => (
         <SwiperCard key={index} {...item} />
       ))}

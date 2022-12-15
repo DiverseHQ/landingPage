@@ -6,7 +6,7 @@ import LandingSection from '../components/new/LandingSection'
 import SocialAndFooter from '../components/new/SocialAndFooter'
 import TeamSection from '../components/new/TeamSection'
 import Roadmap from '../components/new/Roadmap'
-import Newsletter from '../components/new/Newsletter'
+// import Newsletter from '../components/new/Newsletter'
 import useWindowSize from '../utils/hook/useWindowSize'
 import NewFeaturesSection from '../components/new/NewFeaturesSection'
 import NewFeatuersSectionMobile from '../components/new/NewFeatuersSectionMobile'
@@ -38,27 +38,9 @@ export default function Home() {
           <TeamSection />
         </div>
         {/* todo circle */}
-        {/* {!isMobile && (
-          <>
-            <img
-              src="/secondRightCurve.svg"
-              className="absolute right-0 top-0"
-            />
-            <img
-              src="/secondLeftCurve.svg"
-              className="absolute left-0 top-[1000px]"
-            />
-          </>
-        )}
-        {isMobile && (
-          <img
-            src="/secondCurves.png"
-            className="absolute top-0 left-0 w-full"
-          />
-        )} */}
       </div>
 
-      <Newsletter />
+      {/* <Newsletter /> */}
       <SocialAndFooter />
       {/* <div className='h-screen'>
         <NavBar />

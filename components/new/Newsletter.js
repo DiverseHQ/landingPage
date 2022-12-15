@@ -6,7 +6,6 @@ const Newsletter = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Submitted')
   }
 
   const { isMobile } = useWindowSize()

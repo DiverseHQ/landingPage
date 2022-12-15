@@ -10,8 +10,8 @@ const Hovering3DObjects = () => {
     <Canvas flat linear>
       <Suspense fallback={null}>
         <OrbitControls enableZoom={false} enablePan={false} />
-        <ambientLight intensity={1.5} />
-        <pointLight position={[0, 0, 0]} color="#ffffff" intensity={1} />
+        <ambientLight intensity={1} />
+        <pointLight position={[0, 0, 0]} color="#ffffff" intensity={1.5} />
         <ModelComponent
           scale={[2.2, 2.2, 2.2]}
           rotation-x={Math.PI}

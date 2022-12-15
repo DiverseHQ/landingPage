@@ -5,16 +5,7 @@ import * as THREE from 'three'
 
 const Model = (props) => {
   const groupRef = useRef()
-  const { nodes, materials, scene } = useGLTF('./latest3.glb')
-  console.log('nodes', nodes)
-  console.log('materials', materials)
-  console.log('scene', scene)
-  scene.children.forEach((child) => {
-    child.castShadow = true
-    child.receiveShadow = true
-
-    console.log('child', child)
-  })
+  const { scene } = useGLTF('./latest3.glb')
 
   const { camera, mouse } = useThree()
   const vec = new THREE.Vector3()
