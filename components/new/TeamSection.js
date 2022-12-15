@@ -13,14 +13,12 @@ const TeamSection = () => {
         {!isMobile && (
           <div className="flex flex-row itemse-center justify-center">
             <MemberCard
-              image={
-                'https://cdn.discordapp.com/attachments/1014407377056968754/1043118148926312528/WFDFwC_I_400x400.jpg'
-              }
+              image={'rdPfp.png'}
               name={'rathod.lens'}
               bio={'Creative dev'}
             />
             <MemberCard
-              image="/Kirrttiraj.jpg"
+              image="/kirtirajPfp.jpg"
               name={'boredhead.lens'}
               bio={'Frontend dev'}
             />
@@ -30,16 +28,14 @@ const TeamSection = () => {
           <>
             <div className="self-start ml-10">
               <MemberCard
-                image={
-                  'https://cdn.discordapp.com/attachments/1014407377056968754/1043118148926312528/WFDFwC_I_400x400.jpg'
-                }
+                image={'rdPfp.png'}
                 name={'rathod.lens'}
                 bio={'Creative dev'}
               />
             </div>
             <div className="self-end mr-10">
               <MemberCard
-                image="/kirrttiraj.jpg"
+                image="/kirtirajPfp.jpg"
                 name={'boredhead.lens'}
                 bio={'Frontend dev'}
               />
@@ -48,7 +44,7 @@ const TeamSection = () => {
         )}
         <div className="self-start sm:self-center ml-10 sm:ml-0">
           <MemberCard
-            image="/taha.png"
+            image="/tahaPfp.jpeg"
             name={'tahakhak.lens'}
             bio={'Community dev'}
           />
