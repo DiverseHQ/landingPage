@@ -9,6 +9,7 @@ const MainBlockArea = () => {
     <div className="flex flex-col sm:flex-row w-full justify-center sm:justify-between items-center sm:px-16 pt-[150px] sm:pt-0">
       <div className="flex flex-col justify-center items-start w-full px-8 sm:px-0 sm:w-[550px] pb-8 sm:pt-10">
         <div className="font-bold text-2xl  sm:text-5xl mb-10 font-family-glory ">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           You don't need audience to earn from your content
         </div>
         <div
