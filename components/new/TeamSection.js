@@ -13,12 +13,12 @@ const TeamSection = () => {
         {!isMobile && (
           <div className="flex flex-row itemse-center justify-center">
             <MemberCard
-              image={'rdPfp.png'}
+              image={'/rdPfp.png'}
               name={'rathod.lens'}
               bio={'Creative dev'}
             />
             <MemberCard
-              image="/kirtirajPfp.jpg"
+              image={'kirtirajPfp.png'}
               name={'boredhead.lens'}
               bio={'Frontend dev'}
             />
@@ -35,7 +35,7 @@ const TeamSection = () => {
             </div>
             <div className="self-end mr-10">
               <MemberCard
-                image="/kirtirajPfp.jpg"
+                image={'kirtirajPfp.png'}
                 name={'boredhead.lens'}
                 bio={'Frontend dev'}
               />
@@ -44,7 +44,7 @@ const TeamSection = () => {
         )}
         <div className="self-start sm:self-center ml-10 sm:ml-0">
           <MemberCard
-            image="/tahaPfp.jpeg"
+            image={'tahaPfp.jpg'}
             name={'tahakhak.lens'}
             bio={'Community dev'}
           />
