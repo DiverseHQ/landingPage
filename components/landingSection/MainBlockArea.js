@@ -6,7 +6,7 @@ import Hovering3DObjects from './Hovering3DObjects'
 
 const MainBlockArea = () => {
   return (
-    <div className="flex flex-col-reverse sm:flex-row w-full justify-center sm:justify-between items-center sm:px-16 pt-[120px] sm:pt-[0px]  sm:pt-0">
+    <div className="flex flex-col-reverse sm:flex-row w-full justify-center sm:justify-between items-center sm:px-16">
       <div className="flex flex-col justify-center items-start w-full px-8 sm:px-0 sm:w-[550px] pt-4 sm:pt-20 pb-8">
         <div className="font-bold text-2xl  sm:text-5xl mb-10 font-family-glory ">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -27,7 +27,7 @@ const MainBlockArea = () => {
       </div>
       <div
         style={{ backgroundColor: 'transparent' }}
-        className="w-full h-[300px] sm:w-[900px] sm:h-full"
+        className="w-full h-[420px] sm:w-[900px] sm:h-screen"
       >
         <Hovering3DObjects />
       </div>
