@@ -57,32 +57,17 @@ const Roadmap = () => {
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Beta MVP Launch</h3>
+                <h3 class="title">Lens Integration</h3>
               </div>
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Launch Lens Integration</h3>
+                <h3 class="title">WL Beta Launch</h3>
               </div>
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Token Utility</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Sell Digital Content</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Tournaments Feature</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Voting Feature</h3>
+                <h3 class="title">Open Beta Launch</h3>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 export const WHITEPAPER_LINK = 'https://diversehq.gitbook.io/'
 
 // change this to your blog link
-export const BLOG_LINK = 'https://www.getrevue.co/profile/Diversehq'
+export const BLOG_LINK = 'https://diversehq.substack.com/'
 
 export const DISCORD_LINK = 'https://discord.gg/CwKq8Q8UcT'
 

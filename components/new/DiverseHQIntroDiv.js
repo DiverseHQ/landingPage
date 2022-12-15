@@ -8,9 +8,9 @@ const DiverseHQIntroDiv = () => {
           What is Diverse <span className="text-[#9378D8]">HQ</span>?{' '}
         </h2>
         <p className="text-xl  sm:w-[80%]">
-          DiverseHQ is a web3 social platform for building, managing, and
-          developing communities, with a focus on the micro creator economy and
-          assisting creators in converting their audience to the community.
+          DiverseHQ is a web3 platform for building, managing, and developing
+          communities, with a focus on the micro creator economy and assisting
+          creators in converting their audience to the community.
         </p>
 
         {/* <img
