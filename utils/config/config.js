@@ -10,5 +10,4 @@ export const TWITTER_LINK = 'https://twitter.com/useDiverseHQ'
 // change this to your instagram link
 export const INSTAGRAM_LINK = 'https://diversehq.xyz'
 
-export const START_FORM_LINK =
-  'https://docs.google.com/forms/d/e/1FAIpQLScNDSmoyZGWIdkSorhJZv23v6mLDFoPbRIokOTIT0KFDW8U9w/viewform'
+export const START_FORM_LINK = 'https://forms.gle/XyX45iVfs3S2LB1C7'
