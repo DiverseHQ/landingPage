@@ -39,7 +39,7 @@ const TeamSection = () => {
             </div>
             <div className="self-end mr-10">
               <MemberCard
-                image="/Kirrttiraj.jpg"
+                image="/kirrttiraj.jpg"
                 name={'boredhead.lens'}
                 bio={'Frontend dev'}
               />

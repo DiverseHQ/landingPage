@@ -6,11 +6,11 @@ const NewFeatuersSectionMobile = () => {
     {
       title: 'Levitating Lens',
       description:
-        'We use the most popular and amazing decentralized social graph.Lens will keep your followers,follows and posts on the blockchain.',
+        'We use the most popular and amazing decentralized social graph. Lens will keep your followers,follows and posts on the blockchain.',
       ImageComp: () => (
         <svg
           width="150"
-          height="180"
+          height="150"
           viewBox="0 0 54 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -77,24 +77,24 @@ const NewFeatuersSectionMobile = () => {
     {
       title: 'Make Money',
       description:
-        'Post anything from your ebook, illustration, 3d models, or nfts on applicable communities to  sell it.Only buyers will have access to it but will get exposure  to entire community.',
+        'Post anything from your ebook, illustration, 3d models, or nfts on applicable communities to  sell it. Only buyers will have access to it while your content get exposure to entire community.',
       ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
     },
     {
       title: 'Adven Actions',
       description:
-        'Create and join content tournaments of your community,and get rewarded for winning.Create and participate in the decision-making Voting process.',
+        'Gamifying social Interactions. Create and join content tournaments,and get rewarded for winning. Create and participate in the Votes.',
       ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
     },
     {
       title: 'Cool Community',
       description:
-        'Create and join communities of people who share your interests.Create exclusive community and let token holders post and access content.',
+        'Create and join communities of people who share your interests. Create exclusive community and let token holders post and access content.',
       ImageComp: () => <img src="roboDab.png" className="w-[180px] " />
     }
   ]
   return (
-    <div className="w-full bg-black rounded-t-[50px] rounded-b-[50px] p-4 mb-20">
+    <div className="w-full bg-black rounded-3xl p-4 mb-20">
       {data.map((item, index) => (
         <SwiperCard key={index} {...item} />
       ))}

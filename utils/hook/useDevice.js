@@ -8,7 +8,6 @@ default below 576px (portrait phones)
 1600px - Extra Large Desktops
 */
 const useDevice = () => {
-  console.log('rendered useDevice')
   // eslint-disable-next-line
   const [windowHeight, windowWidth] = useWindowSize()
   const isMobile = windowWidth < 768

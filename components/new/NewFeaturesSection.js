@@ -1,23 +1,51 @@
-import React, { useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Autoplay } from 'swiper'
+import React, { useRef, useState } from 'react'
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// import SwiperCore, { Autoplay } from 'swiper'
 
 import 'swiper/swiper.min.css'
 import SwiperCard from './SwiperCard'
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
+// import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
+
+let startX = 0
+let scrollLeft = 0
 
 const NewFeaturesSection = () => {
-  const [swiper, setSwiper] = useState(null)
-  SwiperCore.use([Autoplay])
+  const [mouseDown, setMouseDown] = useState(false)
+  const ref = useRef()
+  const handleMouseDown = (e) => {
+    setMouseDown(true)
+    startX = e.pageX - ref.current.offsetLeft
+    scrollLeft = ref.current.scrollLeft
+    // setMouseDown(true)
+    // setStartX(e.pageX - e.target.offsetLeft)
+    // setScrollLeft(e.target.scrollLeft)
+  }
+  const handleMouseLeave = () => {
+    // mouseDown = false
+    setMouseDown(false)
+  }
+  const handleMouseUp = () => {
+    // mouseDown = false
+    setMouseDown(false)
+  }
+  const handleMouseMove = (e) => {
+    if (!mouseDown) return
+    e.preventDefault()
+    const x = e.pageX - ref.current.offsetLeft
+    const walk = x - startX
+    ref.current.scrollLeft = scrollLeft - walk
+  }
+  // const [swiper, setSwiper] = useState(null)
+  // SwiperCore.use([Autoplay])
   const data = [
     {
       title: 'Levitating Lens',
       description:
-        'We use the most popular and amazing decentralized social graph.Lens will keep your followers,follows and posts on the blockchain.',
+        'We use the most popular and amazing decentralized social graph. Lens will keep your followers,follows and posts on the blockchain.',
       ImageComp: () => (
         <svg
           width="150"
-          height="180"
+          height="150"
           viewBox="0 0 54 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -84,33 +112,50 @@ const NewFeaturesSection = () => {
     {
       title: 'Make Money',
       description:
-        'Post anything from your ebook, illustration, 3d models, or nfts on applicable communities to  sell it.Only buyers will have access to it but will get exposure  to entire community.',
+        'Post anything from your ebook, illustration, 3d models, or nfts on applicable communities to  sell it. Only buyers will have access to it while your content get exposure to entire community.',
       ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
     },
     {
       title: 'Adven Actions',
       description:
-        'Create and join content tournaments of your community,and get rewarded for winning.Create and participate in the decision-making Voting process.',
-      ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
+        'Gamifying social Interactions. Create and join content tournaments,and get rewarded for winning. Create and participate in the Votes.',
+      ImageComp: () => <img src="roboAction.png" className="w-[180px] " />
     },
     {
       title: 'Cool Community',
       description:
-        'Create and join communities of people who share your interests.Create exclusive community and let token holders post and access content.',
+        'Create and join communities of people who share your interests. Create exclusive community and let token holders post and access content.',
       ImageComp: () => <img src="roboDab.png" className="w-[180px] " />
     }
   ]
-  const handleNext = () => {
-    if (!swiper) return
-    swiper.slideNext()
-  }
-  const handlePrev = () => {
-    if (!swiper) return
-    swiper.slidePrev()
-  }
+  // const handleNext = () => {
+  //   if (!swiper) return
+  //   swiper.slideNext()
+  // }
+  // const handlePrev = () => {
+  //   if (!swiper) return
+  //   swiper.slidePrev()
+  // }
   return (
-    <div className="py-20 w-full h-fit text-white relative z-20 relative bg-black  rounded-t-[60px] rounded-b-[60px] sm:rounded-t-[70px] sm:rounded-b-[70px] ">
-      <Swiper
+    <div
+      ref={ref}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseMove}
+      className={`flex  py-10  overflow-x-hidden relative w-full h-fit text-white bg-black  rounded-t-[60px] rounded-b-[60px] sm:rounded-t-[0px] sm:rounded-b-[0px] ${
+        mouseDown ? 'cursor-grabbing' : 'cursor-grab'
+      }`}
+    >
+      {data.map((item, index) => (
+        <SwiperCard
+          key={index}
+          title={item.title}
+          description={item.description}
+          ImageComp={item.ImageComp}
+        />
+      ))}
+      {/* <Swiper
         slidesPerView={2}
         autoplay={{
           delay: 9500,
@@ -140,7 +185,7 @@ const NewFeaturesSection = () => {
         <button onClick={handleNext}>
           <BsArrowRightCircle size={40} />
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }

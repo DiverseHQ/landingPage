@@ -125,7 +125,6 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
         return
       }
       const mobileTopNavEl = document.getElementsByClassName('navbar')[0]
-      console.log('mobileTopNavEl', mobileTopNavEl)
       if (!mobileTopNavEl) return
       const currentScrollPos = window.pageYOffset
       if (prevScrollpos > currentScrollPos) {
@@ -178,7 +177,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
                     `We are not ready yet, Please wait for our launch! Join our discord for more updates!`
                   )
                 }}
-                className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9"
+                className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out duration-300 transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800"
               >
                 Launch APP
               </div>

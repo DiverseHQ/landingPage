@@ -7,8 +7,9 @@ const PoweredBySection = () => {
         DiverseHQ powered By Polygon and LensProtcol{' '}
       </h2>{' '}
       <p className="text-[18px] sm:w-[90%] md:w-[85%] lg:w-[75%]">
-        We are Built our platform on Lens Protcol and use their Document to have
-        decentralized Media and in Future we will launch something on polygon.
+        As the backend of our social infrastructure, we use Lens Protocol.
+        Contracts and decentralized features are deployed on Polygon. We use
+        Matic for token transmission and content monetization.
       </p>
       <div className="powered-icons flex justify-between items-center sm:flex-shrink-0 bg-[#B3B4F3] w-[228px] h-[77px] rounded-[30px]">
         <div className="flex items-center p-[10px] rounded-[30px] ">

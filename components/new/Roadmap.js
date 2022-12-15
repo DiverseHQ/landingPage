@@ -6,17 +6,17 @@ const Roadmap = () => {
 
   return (
     <div className="flex flex-col mt-16 sm:mt-32">
-      <div className="px-4 sm:px-5 text-lg font-[500] sm:text-6xl text-center relative flex flex-row justify-center mb-16 sm:mb-32">
+      <div className="px-4 sm:px-5 text-lg font-[500] sm:text-6xl text-center relative flex flex-row justify-center mb-16 sm:mb-16">
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-l border-[#87C8D3]" />
         <div className="mx-3 sm:mx-5 gradient-text font-bold">
-          New Development Roadmap
+          Development Roadmap
         </div>
         <div className="w-1/4 mt-3 sm:mt-8 h-6 sm:h-20 border-t-2 border-r border-[#87C8D3]" />
       </div>
       {!isMobile && (
         <div className="w-full flex flex-row justify-center">
           <img
-            className="image-unselectable w-[1200px] lg:p-28"
+            className="image-unselectable w-[1100px] lg:p-28"
             src="/roadmap.png"
             alt="roadmap"
           />
@@ -57,32 +57,17 @@ const Roadmap = () => {
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Beta MVP Launch</h3>
+                <h3 class="title">Lens Integration</h3>
               </div>
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Launch Lens Integration</h3>
+                <h3 class="title">WL Beta Launch</h3>
               </div>
             </div>
             <div class="card incomplete">
               <div class="info">
-                <h3 class="title">Token Utility</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Sell Digital Content</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Tournaments Feature</h3>
-              </div>
-            </div>
-            <div class="card incomplete">
-              <div class="info">
-                <h3 class="title">Voting Feature</h3>
+                <h3 class="title">Open Beta Launch</h3>
               </div>
             </div>
           </div>
