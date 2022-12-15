@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
-import MenuDrawer from './MenuDrawer'
+// import MenuDrawer from './MenuDrawer'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import HoverDrawerDownMenuItem from './HoverDrawerDownMenuItem'
@@ -19,15 +19,10 @@ import { ImCross } from 'react-icons/im'
 
 const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   const [hambergerState, setHambergerState] = useState(false)
-  const [mobileHamberGerState, setMobileHambergerState] = useState(false)
   const { isMobile } = useWindowSize()
 
   const toggleHamberger = () => {
     setHambergerState(!hambergerState)
-  }
-
-  const toggleMobileHamberGer = () => {
-    setMobileHambergerState(!mobileHamberGerState)
   }
 
   const onClickFeatures = () => {
@@ -156,12 +151,12 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
         pauseOnHover
         theme="light"
       />
-      {hambergerState && (
+      {/* {hambergerState && (
         <MenuDrawer
           hambergerState={hambergerState}
           setHambergerState={setHambergerState}
         />
-      )}
+      )} */}
       {!isMobile && (
         <div
           className="navbar fixed w-full flex flex-row justify-center items-center z-30 top-[50px] px-20"
@@ -196,36 +191,31 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
           style={{
             transition: 'top 0.5s ease-in-out'
           }}
-          className="navbar fixed top-[50px] flex flex-row items-center justify-between  px-4 w-full z-30 "
+          className=" navbar fixed top-[50px] flex flex-row items-center justify-between  px-4 w-full z-30 "
         >
-          <div className="background-blurred-black p-2 px-4  w-full h-full flex flex-col justify-between items-center">
-            <div className=" flex flex-row justify-between items-center justify-between">
+          <div className="rounded-3xl background-blurred-black p-4  w-full h-full flex flex-col justify-center items-center">
+            <div className="flex flex-row w-full items-center justify-between">
               <LogoComponent />
-              <div>
-                <section className="flex text-white">
-                  <button onClick={toggleMobileHamberGer}>
-                    {mobileHamberGerState ? (
-                      <ImCross className="w-6 h-6" />
-                    ) : (
-                      <img
-                        src="/hamburger.png"
-                        alt="hamburger"
-                        className="w-6"
-                      />
-                    )}
-                  </button>
-                </section>
-              </div>
+              <button onClick={toggleHamberger}>
+                {hambergerState ? (
+                  <ImCross className="w-5" />
+                ) : (
+                  <img src="/hamburger.png" alt="hamburger" className="w-5" />
+                )}
+              </button>
             </div>
 
-            {mobileHamberGerState && (
+            {hambergerState && (
               <div
                 className={` flex items-center flex-col  w-full transition ease-in-out  duration-300 ${
-                  mobileHamberGerState ? 'top-20 ' : 'top-[-490px]'
+                  hambergerState ? 'top-20 ' : 'top-[-490px]'
                 } `}
               >
-                <div className="flex flex-col mt-16 ml-6">
-                  <a
+                <div className="flex flex-col justify-center items-center mt-16 ml-6">
+                  <HoverDrawerDownMenuItem menuItem={docsMenuItem} />
+                  <HoverDrawerDownMenuItem menuItem={aboutUsMenuItem} />
+                  <HoverDrawerDownMenuItem menuItem={communityMenuItem} />
+                  {/* <a
                     href={DISCORD_LINK}
                     target={'_blank'}
                     className="text-xl font-medium"
@@ -254,11 +244,11 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
 
                   <a href={BLOG_LINK} className="text-xl font-medium mt-6">
                     Blog
-                  </a>
+                  </a> */}
 
-                  <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-6 max-w-xs mr-1">
+                  {/* <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-10 max-w-xs mr-1">
                     Launch App
-                  </button>
+                  </button> */}
                 </div>
               </div>
             )}
