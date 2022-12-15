@@ -15,13 +15,19 @@ import {
   TWITTER_LINK,
   WHITEPAPER_LINK
 } from '../../utils/config/config'
+import { ImCross } from 'react-icons/im'
 
 const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   const [hambergerState, setHambergerState] = useState(false)
+  const [mobileHamberGerState, setMobileHambergerState] = useState(false)
   const { isMobile } = useWindowSize()
 
   const toggleHamberger = () => {
     setHambergerState(!hambergerState)
+  }
+
+  const toggleMobileHamberGer = () => {
+    setMobileHambergerState(!mobileHamberGerState)
   }
 
   const onClickFeatures = () => {
@@ -190,18 +196,72 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
           style={{
             transition: 'top 0.5s ease-in-out'
           }}
-          className="navbar fixed top-[50px] flex flex-row items-center justify-between h-14 px-4 w-full z-30"
+          className="navbar fixed top-[50px] flex flex-row items-center justify-between  px-4 w-full z-30 "
         >
-          <div className="background-blurred-black p-2 px-4 rounded-full w-full flex flex-row justify-between items-center ">
-            <LogoComponent />
-            <div>
-              <section className="flex text-white">
-                <button onClick={toggleHamberger}>
-                  <img src="/hamburger.png" alt="hamburger" className="w-6" />
-                  {/* <GrMenu className="w-6 h-6" style={{ color: 'white' }} /> */}
-                </button>
-              </section>
+          <div className="background-blurred-black p-2 px-4  w-full h-full flex flex-col justify-between items-center">
+            <div className=" flex flex-row justify-between items-center justify-between">
+              <LogoComponent />
+              <div>
+                <section className="flex text-white">
+                  <button onClick={toggleMobileHamberGer}>
+                    {mobileHamberGerState ? (
+                      <ImCross className="w-6 h-6" />
+                    ) : (
+                      <img
+                        src="/hamburger.png"
+                        alt="hamburger"
+                        className="w-6"
+                      />
+                    )}
+                  </button>
+                </section>
+              </div>
             </div>
+
+            {mobileHamberGerState && (
+              <div
+                className={` flex items-center flex-col  w-full transition ease-in-out  duration-300 ${
+                  mobileHamberGerState ? 'top-20 ' : 'top-[-490px]'
+                } `}
+              >
+                <div className="flex flex-col mt-16 ml-6">
+                  <a
+                    href={DISCORD_LINK}
+                    target={'_blank'}
+                    className="text-xl font-medium"
+                    rel="noreferrer"
+                  >
+                    Discord
+                  </a>
+
+                  <a
+                    href={TWITTER_LINK}
+                    target={'_blank'}
+                    className="text-xl font-medium mt-6"
+                    rel="noreferrer"
+                  >
+                    Twitter
+                  </a>
+
+                  <a
+                    href={WHITEPAPER_LINK}
+                    target={'_blank'}
+                    className="text-xl font-medium mt-6"
+                    rel="noreferrer"
+                  >
+                    Whitepaper
+                  </a>
+
+                  <a href={BLOG_LINK} className="text-xl font-medium mt-6">
+                    Blog
+                  </a>
+
+                  <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-6 max-w-xs mr-1">
+                    Launch App
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}

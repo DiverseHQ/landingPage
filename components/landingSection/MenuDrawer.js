@@ -25,8 +25,8 @@ const MenuDrawer = ({ hambergerState, setHambergerState }) => {
         />
       )}
       <div
-        className={`top-0 right-0  w-[64vw] h-screen fixed  flex flex-col bg-p-bg border rounded-l-2xl absolute transition ease-in-out  duration-300 ${
-          hambergerState ? 'translate-x-0' : 'translate-x-full'
+        className={` flex items-center pb-0 flex-col justify-between w-full bg-p-bg border rounded-l-2xl absolute transition ease-in-out  duration-300 ${
+          hambergerState ? 'top-20 ' : 'top-[-490px]'
         } `}
       >
         <button
