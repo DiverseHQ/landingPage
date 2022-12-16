@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
-// import MenuDrawer from './MenuDrawer'
+import MenuDrawer from './MenuDrawer'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import HoverDrawerDownMenuItem from './HoverDrawerDownMenuItem'
@@ -15,7 +15,6 @@ import {
   TWITTER_LINK,
   WHITEPAPER_LINK
 } from '../../utils/config/config'
-import { ImCross } from 'react-icons/im'
 
 const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   const [hambergerState, setHambergerState] = useState(false)
@@ -151,12 +150,12 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
         pauseOnHover
         theme="light"
       />
-      {/* {hambergerState && (
+      {hambergerState && (
         <MenuDrawer
           hambergerState={hambergerState}
           setHambergerState={setHambergerState}
         />
-      )} */}
+      )}
       {!isMobile && (
         <div
           className="navbar fixed w-full flex flex-row justify-center items-center z-30 top-[50px] px-20"
@@ -191,67 +190,18 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
           style={{
             transition: 'top 0.5s ease-in-out'
           }}
-          className=" navbar fixed top-[50px] flex flex-row items-center justify-between  px-4 w-full z-30 "
+          className="navbar fixed top-[50px] flex flex-row items-center justify-between h-14 px-4 w-full z-30"
         >
-          <div className="rounded-3xl background-blurred-black p-4  w-full h-full flex flex-col justify-center items-center">
-            <div className="flex flex-row w-full items-center justify-between">
-              <LogoComponent />
-              <button onClick={toggleHamberger}>
-                {hambergerState ? (
-                  <ImCross className="w-5" />
-                ) : (
-                  <img src="/hamburger.png" alt="hamburger" className="w-5" />
-                )}
-              </button>
+          <div className="background-blurred-black p-2 px-4 rounded-full w-full flex flex-row justify-between items-center ">
+            <LogoComponent />
+            <div>
+              <section className="flex text-white">
+                <button onClick={toggleHamberger}>
+                  <img src="/hamburger.png" alt="hamburger" className="w-6" />
+                  {/* <GrMenu className="w-6 h-6" style={{ color: 'white' }} /> */}
+                </button>
+              </section>
             </div>
-
-            {hambergerState && (
-              <div
-                className={` flex items-center flex-col  w-full transition ease-in-out  duration-300 ${
-                  hambergerState ? 'top-20 ' : 'top-[-490px]'
-                } `}
-              >
-                <div className="flex flex-col justify-center items-center mt-16 ml-6">
-                  <HoverDrawerDownMenuItem menuItem={docsMenuItem} />
-                  <HoverDrawerDownMenuItem menuItem={aboutUsMenuItem} />
-                  <HoverDrawerDownMenuItem menuItem={communityMenuItem} />
-                  {/* <a
-                    href={DISCORD_LINK}
-                    target={'_blank'}
-                    className="text-xl font-medium"
-                    rel="noreferrer"
-                  >
-                    Discord
-                  </a>
-
-                  <a
-                    href={TWITTER_LINK}
-                    target={'_blank'}
-                    className="text-xl font-medium mt-6"
-                    rel="noreferrer"
-                  >
-                    Twitter
-                  </a>
-
-                  <a
-                    href={WHITEPAPER_LINK}
-                    target={'_blank'}
-                    className="text-xl font-medium mt-6"
-                    rel="noreferrer"
-                  >
-                    Whitepaper
-                  </a>
-
-                  <a href={BLOG_LINK} className="text-xl font-medium mt-6">
-                    Blog
-                  </a> */}
-
-                  {/* <button className="background-gradient font-[500] text-base rounded-full sm:text-5xl py-3 px-5 sm:py-7 sm:px-20 mt-10 max-w-xs mr-1">
-                    Launch App
-                  </button> */}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       )}
