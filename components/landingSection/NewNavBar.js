@@ -5,10 +5,11 @@ import PropTypes from 'prop-types'
 import LogoComponent from './LogoComponent'
 import useWindowSize from '../../utils/hook/useWindowSize'
 import MenuDrawer from './MenuDrawer'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import HoverDrawerDownMenuItem from './HoverDrawerDownMenuItem'
 import {
+  APP_LINK,
   BLOG_LINK,
   DISCORD_LINK,
   INSTAGRAM_LINK,
@@ -56,17 +57,6 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
     window.open(INSTAGRAM_LINK, '_blank')
   }
 
-  const notifyInfo = (text) =>
-    toast.info(text, {
-      position: 'top-center',
-      autoClose: 10000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'light'
-    })
   const docsMenuItem = {
     title: 'Docs',
     items: [
@@ -173,9 +163,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
 
               <div
                 onClick={() => {
-                  notifyInfo(
-                    `We are not ready yet, Please wait for our launch! Join our discord for more updates!`
-                  )
+                  window.open(APP_LINK, '_blank')
                 }}
                 className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out duration-300 transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800"
               >

@@ -11,3 +11,5 @@ export const TWITTER_LINK = 'https://twitter.com/useDiverseHQ'
 export const INSTAGRAM_LINK = 'https://diversehq.xyz'
 
 export const START_FORM_LINK = 'https://forms.gle/6dWXRg3XfqNzo3TY7'
+
+export const APP_LINK = 'https://app.diversehq.xyz'

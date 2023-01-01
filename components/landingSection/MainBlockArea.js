@@ -1,7 +1,7 @@
 // import { OrbitControls } from '@react-three/drei'
 // import { Canvas } from '@react-three/fiber'
 import React from 'react'
-import { START_FORM_LINK } from '../../utils/config/config'
+import { APP_LINK } from '../../utils/config/config'
 import Hovering3DObjects from './Hovering3DObjects'
 
 const MainBlockArea = () => {
@@ -19,7 +19,7 @@ const MainBlockArea = () => {
           We believe access and content reach is not just for famous few. Join
           us in our mission to democratize and give this power back to you.
         </div>
-        <a href={START_FORM_LINK} target="_blank" rel="noreferrer">
+        <a href={APP_LINK} target="_blank" rel="noreferrer">
           <div className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out  transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800">
             Start Creating
           </div>
