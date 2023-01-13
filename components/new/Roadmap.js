@@ -17,7 +17,7 @@ const Roadmap = () => {
         <div className="w-full flex flex-row justify-center">
           <img
             className="image-unselectable w-[1100px] lg:p-28"
-            src="/roadmap.png"
+            src="/Roadmapv2.png"
             alt="roadmap"
           />
         </div>
@@ -55,12 +55,12 @@ const Roadmap = () => {
                 <h3 class="title">Release Whitepaper</h3>
               </div>
             </div>
-            <div class="card incomplete">
+            <div class="card">
               <div class="info">
                 <h3 class="title">Lens Integration</h3>
               </div>
             </div>
-            <div class="card incomplete">
+            <div class="card">
               <div class="info">
                 <h3 class="title">WL Beta Launch</h3>
               </div>

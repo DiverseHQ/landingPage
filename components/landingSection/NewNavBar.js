@@ -153,7 +153,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
             transition: 'top 0.5s ease-in-out'
           }}
         >
-          <div className="flex flex-row items-center py-10 px-5 rounded-3xl justify-between w-full background-blurred-black">
+          <div className="flex flex-row items-center py-1 px-5 rounded-3xl justify-between w-full background-blurred-black">
             <LogoComponent />
             <div className="flex flex-row items-center justify-center gap-x-11 text-2xl">
               {/* div with on hover shows more options */}
@@ -165,7 +165,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
                 onClick={() => {
                   window.open(APP_LINK, '_blank')
                 }}
-                className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out duration-300 transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800"
+                className="cursor-pointer bg-p-h py-2 px-9 rounded-full text-xl leading-9 ease-in-out duration-300 transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800"
               >
                 Launch APP
               </div>
