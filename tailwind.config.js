@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         'p-h': 'var(--purple-color)',
         's-h': 'var(--pink-color)',
+        'b-bg': 'var(--black-background-color)',
         'p-bg': 'var(--purple-bg)',
         's-bg': 'var(--dark-purple-bg)',
         'l-bg': 'var(--light-purple-bg)',

@@ -5,7 +5,7 @@
 
 @layer utilities {
   .background-gradient {
-    background: linear-gradient(272.77deg, #C987E9 0%, #96CDFF 100%);
+    background: linear-gradient(272.77deg, #c987e9 0%, #96cdff 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
@@ -35,21 +35,20 @@
 }
 
 :root {
-  --pink-color: rgba(176, 21, 250, 0.9);
-  --blue-color: #B0CAFF;
-  --purple-color: #9378D8;
+  --blue-color: #b0caff;
+  --purple-color: #9378d8;
   --primary-text: black;
-  --purple-bg: #D2DAFF;
-  --pink-color: #E319B7;
-  --dark-purple-bg: #B1B2FF;
-  --light-purple-bg: #EEF1FF;
-  --blue-border: #3EBDFA;
-
+  --purple-bg: #d2daff;
+  --pink-color: #e319b7;
+  --dark-purple-bg: #b1b2ff;
+  --light-purple-bg: #eef1ff;
+  --blue-border: #3ebdfa;
+  --black-background-color: #000000;
 }
 
 .gradient-text {
   background-color: #000;
-  background-image: linear-gradient(272.77deg, #904BC7 0%, #167BD8 100%);
+  background-image: linear-gradient(272.77deg, #904bc7 0%, #167bd8 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -59,7 +58,7 @@
 
 /* Timeline Container */
 .timeline {
-  background: #EEF1FF;
+  background: #eef1ff;
   margin: 20px auto;
   padding: 20px;
 }
@@ -81,14 +80,14 @@
 
 /* Global ::before */
 .card::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 70%;
   border: solid #6668ff;
 }
 
 .incomplete::before {
-  border: solid #B3B4F3;
+  border: solid #b3b4f3;
 }
 
 /* Setting the border of top, bottom, left */
@@ -131,7 +130,7 @@
 .info {
   display: flex;
   flex-direction: column;
-  background: #EEF1FF;
+  background: #eef1ff;
   color: gray;
   border-radius: 10px;
   padding: 10px;
@@ -146,7 +145,7 @@
 
 /* Timeline dot  */
 .title::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 15px;
   height: 15px;
@@ -156,17 +155,17 @@
 }
 
 /* text right if the card is even  */
-.card:nth-child(even)>.info>.title {
+.card:nth-child(even) > .info > .title {
   text-align: right;
 }
 
 /* setting dot to the left if the card is odd */
-.card:nth-child(odd)>.info>.title::before {
+.card:nth-child(odd) > .info > .title::before {
   left: -60px;
 }
 
 /* setting dot to the right if the card is odd */
-.card:nth-child(even)>.info>.title::before {
+.card:nth-child(even) > .info > .title::before {
   right: -60px;
 }
 
@@ -202,16 +201,16 @@
 .powered-div {
   min-width: 300px;
   width: 80%;
-  border: 2px solid #B3B4F3;
+  border: 2px solid #b3b4f3;
   padding: 82px 0 82px 44px;
   border-width: 0px 0 2px 2px;
   border-radius: 40px 0 40px 40px;
 }
 
 .powered-div::before {
-  content: "";
+  content: '';
   position: absolute;
-  border: 2px solid #B3B4F3;
+  border: 2px solid #b3b4f3;
   border-width: 0 2px 0 0;
   border-radius: 40px 0 40px 40px;
   padding: 82px 0 82px 44px;
@@ -284,15 +283,15 @@
   }
 }
 
-.powered-title { 
+.powered-title {
   position: relative;
 }
 
 .powered-title::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 200px;
-  border: solid #B3B4F3;
+  border: solid #b3b4f3;
   border-width: 2px 0 0 0;
   border-radius: 40px 0 0 0;
   top: -83px;
@@ -305,10 +304,10 @@
 }
 
 .powered-box::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 80px;
-  border: solid #B3B4F3;
+  border: solid #b3b4f3;
   border-width: 2px 2px 2px 0;
   border-radius: 0 40px 40px 0;
   padding: 74px 0;
@@ -316,12 +315,11 @@
   top: 35px;
 }
 
-
 /* Introduction div */
 .intro {
   min-width: 300px;
   width: 80%;
-  border: 2px solid #DFE1FC;
+  border: 2px solid #dfe1fc;
   padding: 55px 30px;
   border-width: 0px 0 4px 4px;
   border-radius: 40px 0 0 40px;
@@ -332,10 +330,10 @@
 }
 
 .intro-title::before {
-  content: "";
+  content: '';
   width: 360px;
   position: absolute;
-  border: solid #DFE1FC;
+  border: solid #dfe1fc;
   border-width: 4px 4px 0 0;
   border-radius: 40px 40px 40px 0;
   left: -29px;
@@ -344,9 +342,9 @@
 }
 
 .intro-title::after {
-  content: "";
+  content: '';
   position: absolute;
-  border: solid #DFE1FC;
+  border: solid #dfe1fc;
   width: 140px;
   bottom: 10px;
   left: 190px;

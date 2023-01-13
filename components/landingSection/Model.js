@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 const Model = (props) => {
   const groupRef = useRef()
-  const { scene } = useGLTF('./latest3.glb')
+  const { scene } = useGLTF('./landingPage.glb')
 
   const { camera, mouse } = useThree()
   const vec = new THREE.Vector3()

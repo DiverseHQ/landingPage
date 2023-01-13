@@ -165,7 +165,7 @@ const NewNavBar = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
                 onClick={() => {
                   window.open(APP_LINK, '_blank')
                 }}
-                className="cursor-pointer bg-p-h py-2 px-9 rounded-full text-xl leading-9 ease-in-out duration-300 transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800"
+                className="cursor-pointer bg-p-h py-2 px-9 rounded-full text-xl leading-9 ease-in-out transition delay-150 duration-200 hover:scale-110"
               >
                 Launch APP
               </div>

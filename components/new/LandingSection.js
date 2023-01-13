@@ -8,7 +8,7 @@ import MainBlockArea from '../landingSection/MainBlockArea'
 
 const LandingSection = ({ featureSectionRef, teamSectionRef, roadMapRef }) => {
   return (
-    <div className="h-[calc(100vh+75px)] bg-black text-white rounded-b-[60px]  sm:rounded-b-[75px]">
+    <div className="h-[calc(100vh+75px)] bg-b-bg text-white rounded-b-[30px]  sm:rounded-b-[50px]">
       <NewNavBar
         featureSectionRef={featureSectionRef}
         teamSectionRef={teamSectionRef}

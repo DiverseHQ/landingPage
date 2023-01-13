@@ -16,11 +16,11 @@ const MainBlockArea = () => {
           className="text-xl mb-14 leading-6 sm:leading-8"
           style={{ letterSpacing: '2px' }}
         >
-          We believe access and content reach is not just for famous few. Join
-          us in our mission to democratize and give this power back to you.
+          Monetization and content reach is not just for famous few. Join us in
+          our mission to democratize and give this power back to you.
         </div>
         <a href={APP_LINK} target="_blank" rel="noreferrer">
-          <div className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out  transition delay-150 duration-300 hover:scale-110 hover:bg-purple-800">
+          <div className="cursor-pointer bg-p-h py-3 px-9 rounded-full text-xl leading-9 ease-in-out  transition delay-150 duration-200 hover:scale-110">
             Start Creating
           </div>
         </a>

@@ -143,7 +143,7 @@ const NewFeaturesSection = () => {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
-      className={`flex  py-10  overflow-x-hidden relative w-full h-fit text-white bg-black  rounded-t-[60px] rounded-b-[60px] sm:rounded-t-[0px] sm:rounded-b-[0px] ${
+      className={`flex  py-10  overflow-x-hidden relative w-full h-fit text-white bg-b-bg  rounded-t-[60px] rounded-b-[60px] sm:rounded-t-[0px] sm:rounded-b-[0px] ${
         mouseDown ? 'cursor-grabbing' : 'cursor-grab'
       }`}
     >

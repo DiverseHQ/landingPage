@@ -94,7 +94,7 @@ const NewFeatuersSectionMobile = () => {
     }
   ]
   return (
-    <div className="w-full bg-black rounded-3xl p-4 mb-20">
+    <div className="w-full bg-b-bg rounded-3xl p-4 mb-20">
       {data.map((item, index) => (
         <SwiperCard key={index} {...item} />
       ))}
