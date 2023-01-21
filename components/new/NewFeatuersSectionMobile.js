@@ -81,13 +81,13 @@ const NewFeatuersSectionMobile = () => {
       ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
     },
     {
-      title: 'Adven Actions',
+      title: 'Advent Actions',
       description:
         'Gamifying social Interactions. Create and join content tournaments,and get rewarded for winning. Create and participate in the Votes.',
       ImageComp: () => <img src="roboMoney.png" className="w-[180px] " />
     },
     {
-      title: 'Cool Community',
+      title: 'Cool Communities',
       description:
         'Create and join communities of people who share your interests. Create exclusive community and let token holders post and access content.',
       ImageComp: () => <img src="roboDab.png" className="w-[180px] " />
