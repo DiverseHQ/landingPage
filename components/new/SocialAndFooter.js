@@ -64,9 +64,7 @@ const SocialAndFooter = () => {
               </h6>
             </ul>
             <ul className="text-sm sm:text-2xl hover:underline">
-              <a href="mailto:diveresehq.xyz@gmail.com">
-                diversehq.xyz@gmail.com
-              </a>
+              <a href="mailto:team@diversehq.xyz">team@diversehq.xyz</a>
             </ul>
           </div>
         </div>
