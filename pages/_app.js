@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
       <NextSeo
         title="DiverseHQ"
-        description="Building next Reddit, where anyone can grow their own audience."
+        description="Building next Reddit, where anyone can easily grow their audience."
         openGraph={{
           type: 'website',
           locale: 'en_US',

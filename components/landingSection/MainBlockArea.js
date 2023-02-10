@@ -10,7 +10,7 @@ const MainBlockArea = () => {
       <div className="flex flex-col justify-center items-start w-full px-8 sm:px-0 sm:w-[550px] pt-4 sm:pt-20 pb-8">
         <div className="font-bold text-2xl  sm:text-5xl mb-10 font-family-glory ">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Building next Reddit, where anyone can grow their own audience.
+          Building next Reddit, where anyone can easily grow their audience.
         </div>
         <div
           className="text-xl mb-14 leading-6 sm:leading-8"
